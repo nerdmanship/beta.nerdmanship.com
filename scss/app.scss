@@ -4,6 +4,8 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
 @include foundation-global-styles;
 // @include foundation-grid;
 @include foundation-flex-grid;
@@ -49,4 +51,4 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'artboard';
+@import 'scene';
