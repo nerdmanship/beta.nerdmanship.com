@@ -14,6 +14,7 @@ var
   tlViewBox = new TimelineMax(),
   tlFinish = new TimelineMax(),
   tlText = new TimelineMax(),
+  tlScrubber = new TimelineMax(),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
@@ -30,6 +31,7 @@ var
   // REFERENCES
   nerdmanship = select("#nerdmanship"),
   container = select(".header"),
+  scrubber = select("#discoverySlider"),
   
   units = selectAll(".unit"),
   chars = selectAll(".chars"),

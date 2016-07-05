@@ -46,6 +46,7 @@ body { background: $black; }
 		height: 100%;
 		min-height: 400px;
 		min-width: 600px;
+		max-width: 1280px;
 		left: 50%;
 		top: 40%;
 		transform: translate(-50%, -50%);
@@ -79,7 +80,7 @@ body { background: $black; }
 
 
 
-#timelineController {
+#discoverySlider {
 	visibility: hidden;
 	position: absolute;
 	bottom: 40%;
@@ -89,13 +90,14 @@ body { background: $black; }
 	transform: translateX(-50%);
 	border-radius: 10px;
 	border: none;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.01);
 	.ui-slider-handle {
 		background: white;
 		border-radius: 20px;
 		border: none;
 	}
 }
+
 .ui-state-focus {
 	outline: none;
 	background: red;

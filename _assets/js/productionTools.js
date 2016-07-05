@@ -9,7 +9,7 @@ $("#btnPlay").on("click", function(){
 });
 
 // SLIDER
-$("#slider").slider({
+$("#productionSlider").slider({
   step: 0.1,
   slide: function ( event, ui ) {
     tl.progress( ui.value/100 ).pause();
@@ -20,18 +20,6 @@ $("#slider").slider({
 });	
 
 function updateSlider() {
-  $("#slider").slider("value", tl.progress()*100);
+  $("#productionSlider").slider("value", tl.progress()*100);
+  $("#discoverySlider").slider("value", tl.progress()*100);
 }
-
-$("#timelineController").slider({
-  range: false,
-  min: 0,
-  max: 1,
-  step: 0.001,
-  slide: function ( event, ui ) {
-    tl.progress( ui.value ).pause();
-  },
-  stop: function () {
-    tl.play();
-  }
-});

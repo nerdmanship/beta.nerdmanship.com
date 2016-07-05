@@ -83,6 +83,24 @@ tlText
   .staggerFrom(lowerLetters, 5, {autoAlpha:0, rotationY:90, transformOrigin:"0% 50% -50%", ease: Power3.easeOut }, 0.05, 1.2)
   ;
 
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// REVEAL SCRUBBER
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+function showScrubber() {
+  TweenMax.to(scrubber, 1, { autoAlpha: 1 });
+}
+
+
+
+
+
+
+
+
+
+
+
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // TIMELINES FOR KINETIC TYPOGRAPHY
 //––––––––––––––––––––––––––––––––––––––––––––––––––––

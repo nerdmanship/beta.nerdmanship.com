@@ -94,3 +94,18 @@ function chanceRoll(chance) {
   if (chance == null) { chance = 50; }
   return chance > 0 && Math.random() * 100 <= chance;
 }
+
+$("#discoverySlider").slider({
+  step: 0.1,
+  slide: function ( event, ui ) {
+    tl.progress( ui.value/100 ).pause();
+  },
+  stop: function () {
+    tl.play();
+  }
+});	
+
+
+
+
+

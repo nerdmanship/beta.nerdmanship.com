@@ -27,4 +27,5 @@ tl
   .add(bgTl, "finish =+2").play(0)
   .add(tlFinish, "finish")
   .add(tlText, "finish")
+  .call(showScrubber)
 ;
