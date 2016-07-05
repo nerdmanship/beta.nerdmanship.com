@@ -354,7 +354,7 @@
 		},
 	"\/_assets\/js\/productionTools.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/js\/productionTools.js",
 		"outputAbbreviatedPath": "\/_assets\/js\/min\/productionTools-min.js",
