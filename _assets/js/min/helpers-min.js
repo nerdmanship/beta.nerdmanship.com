@@ -1,0 +1,1 @@
+function centerBg(){TweenMax.set(bg,{x:"-50%",y:"-50%"})}function random(n,e){return null==e&&(e=n,n=0),Math.random()*(e-n)+n}function chanceRoll(n){return null==n&&(n=50),n>0&&100*Math.random()<=n}window.addEventListener("resize",centerBg);

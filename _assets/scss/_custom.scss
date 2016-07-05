@@ -1,0 +1,116 @@
+@import 'https://fonts.googleapis.com/css?family=Geo:400i';
+
+$logoFont: 'Geo', sans-serif;
+
+$base: hsla(160, 10%, 70%, 1);
+
+$white: hsla(60, 20%, 95%, 1);
+$bright: lighten($base, 20);
+$light: lighten($base, 10);
+$shade: desaturate(darken($base, 30), 5);
+$dark: desaturate(darken($base, 50), 5);
+$black: desaturate(darken($base, 60), 5);
+
+
+.header,
+.main {
+	position: relative;
+	width: 100%;
+	height: 95vh;
+	min-height: 550px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body { background: $black; }
+
+
+.header {
+
+ 	#bgSVG {
+		position: absolute;
+		min-width: 720px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		overflow: visible;
+		z-index: -1;
+		fill: $dark;
+	}
+
+	#nerdmanship {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		min-height: 400px;
+		min-width: 600px;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		overflow: visible;
+
+		opacity: 0;
+		.box { visibility: hidden; }
+		#charGroup { fill: #F2F2EB; }
+	}
+
+	.logoText {
+		opacity: 0;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		color: $base;
+		font: 2em $logoFont;
+		text-transform: uppercase;
+		letter-spacing: 0.0625em;
+	}
+
+	.logoUpper { top: 20%; }
+	.logoLower { bottom: 30%; min-width: 260px; }
+}
+
+
+.main { background-color: $white; }
+
+
+
+
+#timelineController {
+	visibility: hidden;
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+	width: 40%;
+	height: 0.25em;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	border: none;
+	background: rgba(255,255,255,0.5);
+	.ui-slider-handle {
+		background: white;
+		border-radius: 20px;
+		border: none;
+	}
+}
+.ui-state-focus {
+	outline: none;
+	background: red;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.3em;
+    margin-left: -.6em;
+}
+
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+    touch-action: none;
+}

@@ -1,0 +1,44 @@
+// Controls
+.controls {
+  position: fixed;
+  top:0;
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  .buttons{
+    @media only screen and (max-width: 40em) {width:100%;}
+    button {
+      padding:5;
+      margin:0;
+      width:15%;
+      background: transparent;
+      &:hover{
+        background: transparent;
+        color: rgba(255,255,255,0.5);
+      }
+      &:focus{
+        background: transparent;
+        color: white;
+        outline-width: 0;
+      }
+    }
+  }
+  .scrubb {
+    padding-right: 100px;
+    #slider {
+      @media only screen and (max-width: 40em) {display:none;}
+      top: 20px;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255,255,255,0.5);
+      .ui-slider-handle {
+        background: white;
+        border-radius: 20px;
+        border: none;
+      }
+    }
+  }
+}
