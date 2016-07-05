@@ -104,7 +104,7 @@
 	"\/_assets\/jade\/includes\/testController.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.html",
@@ -354,7 +354,7 @@
 		},
 	"\/_assets\/js\/productionTools.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/js\/productionTools.js",
 		"outputAbbreviatedPath": "\/_assets\/js\/min\/productionTools-min.js",
@@ -7247,15 +7247,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public_html\/css\/jquery-ui.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/public_html\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public_html\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
