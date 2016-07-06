@@ -46,7 +46,7 @@ function makeBg(side, gutter, rows) {
     } 
   }
 }
-makeBg(20, 1, 11); // Side, gutter, rows
+makeBg(10, 1, 7); // Side, gutter, rows
 
 
 

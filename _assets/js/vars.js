@@ -107,11 +107,11 @@ var
 
   base = "hsla(160, 10%, 70%, 1)";
   white = "hsla(60, 20%, 95%, 1)";
-  bright = "hsla(60, 20%, 90%, 1)";
-  light = "hsla(60, 20%, 80%, 1)";
-  shade = "hsla(60, 15%, 40%, 1)";
-  dark = "hsla(60, 15%, 20%, 1)";
-  black = "hsla(60, 15%, 10%, 1)";
+  bright = "hsla(160, 10%, 90%, 1)";
+  light = "hsla(160, 10%, 80%, 1)";
+  shade = "hsla(160, 5%, 40%, 1)";
+  dark = "hsla(160, 5%, 20%, 1)";
+  black = "hsla(160, 5%, 10%, 1)";
 
   logoText = selectAll(".logoText"),
   upperText = new SplitText(".logoUpper", {type:"words,chars"}), 
