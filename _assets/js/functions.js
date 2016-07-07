@@ -142,7 +142,7 @@ function startPulse() {
 }
 var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
 
-
+sliderHandleTarget.draggable();
 
 sliderHandleTarget.addEventListener("mousedown", killPulse);
 
