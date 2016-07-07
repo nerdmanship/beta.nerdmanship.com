@@ -1,3 +1,5 @@
+$('.ui-slider-handle').draggable();
+
 function makeBg(side, gutter, rows) {
   var rSide = side;
   var rGutt = gutter;
@@ -141,8 +143,6 @@ function startPulse() {
   	;
 }
 var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
-
-sliderHandleTarget.draggable();
 
 sliderHandleTarget.addEventListener("mousedown", killPulse);
 
