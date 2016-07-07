@@ -13,6 +13,35 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
+	"\/_assets\/jade\/includes\/controllerContainer.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/controllerContainer.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_assets\/jade\/includes\/controllerContainer.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/controllerContainer.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/controllerContainer.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/includes\/discoverySlider.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/discoverySlider.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_assets\/jade\/includes\/footer.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -104,7 +133,7 @@
 	"\/_assets\/jade\/includes\/testController.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.html",
@@ -161,6 +190,37 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/links.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/links.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/scrubbSVG.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/scrubbSVG.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/scrubbSVG.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/sliderHandle.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/sliderHandle.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_assets\/jade\/svgs\/sliderHandle.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/sliderHandle.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/sliderHandle.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -354,7 +414,7 @@
 		},
 	"\/_assets\/js\/productionTools.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/js\/productionTools.js",
 		"outputAbbreviatedPath": "\/_assets\/js\/min\/productionTools-min.js",
@@ -7251,12 +7311,32 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public_html\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public_html\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/public_html\/js\/app-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public_html\/js\/app-min.js",
 		"outputAbbreviatedPath": "\/public_html\/js\/min\/app-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/public_html\/js\/DrawSVGPlugin.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public_html\/js\/DrawSVGPlugin.min.js",
+		"outputAbbreviatedPath": "\/public_html\/js\/min\/DrawSVGPlugin.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -7295,12 +7375,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/public_html\/js\/SplitText.js": {
+	"\/public_html\/js\/jquery.mobile-1.4.5.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public_html\/js\/SplitText.js",
-		"outputAbbreviatedPath": "\/public_html\/js\/min\/SplitText-min.js",
+		"inputAbbreviatedPath": "\/public_html\/js\/jquery.mobile-1.4.5.js",
+		"outputAbbreviatedPath": "\/public_html\/js\/min\/jquery.mobile-1.4.5-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/public_html\/js\/SplitText.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public_html\/js\/SplitText.min.js",
+		"outputAbbreviatedPath": "\/public_html\/js\/min\/SplitText.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

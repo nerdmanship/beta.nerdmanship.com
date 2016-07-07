@@ -80,6 +80,7 @@ window.addEventListener("resize", center);
 function center() {
     TweenMax.set(bgSVG, { x: "-50%", y: "-50%" });
     TweenMax.set(nerdmanship, { x: "-50%", y: "-50%" });
+    TweenMax.set(".controllerContainer", { x: "-50%", y: "-50%" });
 };
 
 
@@ -96,16 +97,84 @@ function chanceRoll(chance) {
 }
 
 $("#discoverySlider").slider({
-  step: 0.1,
+  step: 0.01,
+  slide: function ( event, ui ) {
+    tl.progress( ui.value/100 ).pause();
+    TweenMax.set(scrubbProgress, {drawSVG: ui.value + "%"});
+    TweenMax.set(scrubbSVG, {autoAlpha: 0.5});
+  },
+  stop: function () {
+    tl.play();
+    TweenMax.set(scrubbSVG, {autoAlpha: 1});
+  }
+});	
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// REVEAL SCRUBBER
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+var showing = false;
+
+function showScrubber() {
+  if (!(showing)) {
+    var tl = new TimelineMax();
+    
+    tl
+    .to("#scrubbSVG", 1, {autoAlpha:1}, 0)
+    .from(".controllerContainer", 1, { x: "-=200" }, 0)
+    .to(".circle1", 0.5, {scale: 1})
+    ;
+    showing = true;
+    startPulse();
+  }  
+}
+
+var tlPulse;
+function startPulse() {
+  tlPulse = new TimelineMax({ repeat: -1, yoyo: true });
+  // yoyo scale and alpha async
+  TweenMax.set(circles, {transformOrigin: "center", autoAlpha: 0.4 });
+  
+  tlPulse
+  	.to(circle2, 1, {scale: 1.5, autoAlpha: 0.6 }, 0)
+  	.to(circle3, 1, {scale: 2, autoAlpha: 0.3 }, 0)
+  	;
+}
+var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
+
+
+
+sliderHandleTarget.addEventListener("mousedown", killPulse);
+
+function killPulse() {
+	TweenMax.set(circles, { autoAlpha: 0 });
+	tlPulse.kill();
+};
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// PRODUCTION TOOLS
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// BUTTONS
+$("#btnPause").on("click", function(){tl.pause();});
+$("#btnPlay").on("click", function(){
+  tl.play(0);
+});
+
+// SLIDER
+$("#productionSlider").slider({
+  step: 0.01,
   slide: function ( event, ui ) {
     tl.progress( ui.value/100 ).pause();
   },
   stop: function () {
     tl.play();
   }
-});	
+}); 
 
-
-
-
-
+function updateSlider() {
+  $("#productionSlider").slider("value", tl.progress()*100);
+  $("#discoverySlider").slider("value", tl.progress()*100);
+  TweenMax.set(scrubbProgress, {drawSVG: tl.progress()*100 + "%"});
+  TweenMax.set(sliderHandle, {left: tl.progress()*100 + "%"});
+}

@@ -10,6 +10,8 @@ TweenLite.defaultEase = Power0.easeOut;
 TweenMax.set( bgSVG, {rotation:45 } );
 TweenMax.set(bgRects, { transformOrigin: "center" });
 
+TweenMax.set(".circle1", { transformOrigin: "center", scale: 0, autoAlpha:1 });
+
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // STARTING POSITION CHARACTERS
 //––––––––––––––––––––––––––––––––––––––––––––––––––––

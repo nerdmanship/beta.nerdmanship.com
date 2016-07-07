@@ -84,12 +84,6 @@ tlText
   ;
 
 
-//––––––––––––––––––––––––––––––––––––––––––––––––––––
-// REVEAL SCRUBBER
-//––––––––––––––––––––––––––––––––––––––––––––––––––––
-function showScrubber() {
-  TweenMax.to(scrubber, 1, { autoAlpha: 1 });
-}
 
 
 

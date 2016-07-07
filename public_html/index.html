@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- Clean up scripts before deploy--><!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -1800,7 +1801,20 @@
               </g>
             </g>
           </svg>
-          <div id="discoverySlider"></div>
+          <div class="controllerContainer">
+            <div class="sliderContainer">
+              <svg id="scrubbSVG" viewbox="0 0 600 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path id="scrubbRail" d="M0,10 L600,10" stroke-width="20" stroke-linecap="butt"></path>
+                <path id="scrubbProgress" d="M0,10 L600,10" stroke-width="20" stroke-linecap="butt"></path>
+              </svg>
+            </div>
+            <svg id="sliderHandle" viewbox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle r="10" class="circle3"></circle>
+              <circle r="10" class="circle2"></circle>
+              <circle r="10" class="circle1"></circle>
+            </svg>
+            <div id="discoverySlider"></div>
+          </div>
           <div class="logoText logoLower">animation studio</div>
           <div class="gradient"></div>
         </div>
@@ -1846,12 +1860,21 @@
         </div>
       </div>
     </div>
-    <!--include includes/testController.jade-->
+    <div class="controls row">
+      <div class="buttons small-4 columns">
+        <button id="btnPause" class="button"><i class="fa fa-pause fa-2x"></i></button>
+        <button id="btnPlay" class="button"><i class="fa fa-play fa-2x"></i></button>
+      </div>
+      <div class="scrubb small-8 columns">
+        <div id="productionSlider"></div>
+      </div>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/foundation.js"></script>
     <script src="js/TweenMax.js"></script>
-    <script src="js/SplitText.js"></script>
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/DrawSVGPlugin.min.js"></script>
     <script src="js/app-min.js"></script>
   </body>
 </html>

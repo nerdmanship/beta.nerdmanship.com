@@ -31,7 +31,11 @@ var
   // REFERENCES
   nerdmanship = select("#nerdmanship"),
   container = select(".header"),
-  scrubber = select("#discoverySlider"),
+  scrubbSVG = select("#scrubbSVG"),
+  scrubbProgress = select("#scrubbProgress"),
+  circle2 = select(".circle2"),
+  circle3 = select(".circle3"),
+  circles = [circle2, circle3],
   
   units = selectAll(".unit"),
   chars = selectAll(".chars"),
