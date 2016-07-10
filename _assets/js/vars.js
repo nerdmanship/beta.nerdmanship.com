@@ -33,9 +33,12 @@ var
   container = select(".header"),
   scrubbSVG = select("#scrubbSVG"),
   scrubbProgress = select("#scrubbProgress"),
+  scrubbRail = select("#scrubbRail"),
+  circle1 = select(".circle1"),
   circle2 = select(".circle2"),
   circle3 = select(".circle3"),
-  circles = [circle2, circle3],
+  circle4 = select(".circle4"),
+  pulseCircs = [circle2, circle3],
   
   units = selectAll(".unit"),
   chars = selectAll(".chars"),
@@ -116,6 +119,9 @@ var
   shade = "hsla(160, 5%, 40%, 1)";
   dark = "hsla(160, 5%, 20%, 1)";
   black = "hsla(160, 5%, 10%, 1)";
+
+  pink = "#d46",
+  darkPink = "#9e1d3a",
 
   logoText = selectAll(".logoText"),
   upperText = new SplitText(".logoUpper", {type:"words,chars"}), 

@@ -1803,12 +1803,13 @@
           </svg>
           <div class="controllerContainer">
             <div class="sliderContainer">
-              <svg id="scrubbSVG" viewbox="0 0 600 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path id="scrubbRail" d="M0,10 L600,10" stroke-width="20" stroke-linecap="butt"></path>
-                <path id="scrubbProgress" d="M0,10 L600,10" stroke-width="20" stroke-linecap="butt"></path>
+              <svg id="scrubbSVG" viewbox="0 0 600 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path id="scrubbRail" d="M0,10 L600,10" stroke-width="50" stroke-linecap="butt"></path>
+                <path id="scrubbProgress" d="M0,10 L600,10" stroke-width="50" stroke-linecap="butt"></path>
               </svg>
             </div>
             <svg id="sliderHandle" viewbox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle r="10" class="circle4"></circle>
               <circle r="10" class="circle3"></circle>
               <circle r="10" class="circle2"></circle>
               <circle r="10" class="circle1"></circle>
@@ -1823,8 +1824,8 @@
     <div id="main" class="row">
       <div class="small-10 columns small-offset-1">
         <div class="presentation">
-          <p><code>The Nerdmanship Animation Studio makes code-based motion graphics for browsers. A more story-driven, cinematic and emotional web-experience, while still being lighter, faster and more performant than most. Happy users, happy clients!</code></p>
-          <p><code>The studio is currently in research and development mode, but <span class="shiny">throw us your email address</span> and you'll be the first to know how and when we're moving forward.</code></p>
+          <p>The Nerdmanship Animation Studio makes code-based motion graphics for browsers. A more story-driven, cinematic and emotional web-experience, while still being lighter, faster and more performant than most. Happy users, happy clients!</p>
+          <p>The studio is currently in research and development mode, but <span class="shiny">throw us your email address</span> and you'll be the first to know how and when we're moving forward.</p>
           <div id="signupFormContainer">
             <div class="row">
               <div class="columns small-12">
@@ -1858,6 +1859,15 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="controls row">
+      <div class="buttons small-4 columns">
+        <button id="btnPause" class="button"><i class="fa fa-pause fa-2x"></i></button>
+        <button id="btnPlay" class="button"><i class="fa fa-play fa-2x"></i></button>
+      </div>
+      <div class="scrubb small-8 columns">
+        <div id="productionSlider"></div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>

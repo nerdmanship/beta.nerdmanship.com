@@ -32,7 +32,7 @@ function makeBg(side, gutter, rows) {
     // Add each rect to the SVG
     svg.appendChild(r);
     
-    // Give each rect dimensions
+    // Give each rect attributes
     r.setAttribute("width", rSide);
     r.setAttribute("height", rSide);
     r.setAttribute("class", "rectangle rectangle" +i);
@@ -77,7 +77,7 @@ makeBgTls(bgTl);
 // ----------
 
 
-// Function to keep content centered on resize
+// Center on resize
 window.addEventListener("resize", center);
 function center() {
     TweenMax.set(bgSVG, { x: "-50%", y: "-50%" });
@@ -86,33 +86,54 @@ function center() {
 };
 
 
-// Function to return random number between given range
+// Return random number between given range
 function random(min, max) {
   if (max == null) { max = min; min = 0; }
   return Math.random() * (max - min) + min;
 }
 
-// Function to return a bool based on a given percentage
+// Return a bool based on a given percentage
 function chanceRoll(chance) {
   if (chance == null) { chance = 50; }
   return chance > 0 && Math.random() * 100 <= chance;
 }
+
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// SLIDER
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $("#discoverySlider").slider({
   step: 0.01,
   slide: function ( event, ui ) {
     tl.progress( ui.value/100 ).pause();
     TweenMax.set(scrubbProgress, {drawSVG: ui.value + "%"});
-    TweenMax.set(scrubbSVG, {autoAlpha: 0.5});
+    TweenMax.to(".controllerContainer", 0.2, {autoAlpha: 0.2});
   },
   stop: function () {
     tl.play();
-    TweenMax.set(scrubbSVG, {autoAlpha: 1});
+    TweenMax.to(".controllerContainer", 0.2, {autoAlpha: 1});
+    TweenMax.to(circle1, 0.1, { scale: 1 });
   }
 });	
 
+// Handle hover effect
+var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
+sliderHandleTarget.addEventListener("mouseover", focusHandle);
+sliderHandleTarget.addEventListener("mouseleave", blurHandle);
+
+function focusHandle(){
+	TweenMax.to(circle1, 0.1, { scale: 1.2 });
+}
+
+function blurHandle(){
+	TweenMax.to(circle1, 0.1, { scale: 1 });
+}
+
+
+
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
-// REVEAL SCRUBBER
+// REVEAL SLIDER
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 var showing = false;
@@ -120,34 +141,38 @@ var showing = false;
 function showScrubber() {
   if (!(showing)) {
     var tl = new TimelineMax();
-    
+
     tl
-    .to("#scrubbSVG", 1, {autoAlpha:1}, 0)
-    .from(".controllerContainer", 1, { x: "-=200" }, 0)
-    .to(".circle1", 0.5, {scale: 1})
+    .to("#scrubbSVG", 0.5, {autoAlpha:1})
+    .fromTo(scrubbProgress, 0.5, {drawSVG: "0%" }, {drawSVG: "100%" }, 0)
+    .fromTo(scrubbRail, 0.5, {drawSVG: "0%" }, {drawSVG: "100%" }, 0)
+    .to(".circle1", 0.5, {scale: 1, ease: Power3.easeOut})
     ;
     showing = true;
     startPulse();
   }  
 }
 
+// Start pulse
 var tlPulse;
 function startPulse() {
-  tlPulse = new TimelineMax({ repeat: -1, yoyo: true });
-  // yoyo scale and alpha async
-  TweenMax.set(circles, {transformOrigin: "center", autoAlpha: 0.4 });
+  tlPulse = new TimelineMax({ repeat: -1, delay:2 });
+  TweenMax.set(pulseCircs, {transformOrigin: "center", autoAlpha: 0 });
   
   tlPulse
-  	.to(circle2, 1, {scale: 1.5, autoAlpha: 0.6 }, 0)
-  	.to(circle3, 1, {scale: 2, autoAlpha: 0.3 }, 0)
+  	.to(circle2, 2, { bezier: [{ autoAlpha: 0 }, { autoAlpha: 0.2 }, { autoAlpha: 0.8 }, { autoAlpha: 0 }], ease: Power3.easeOut }, 0.3)
+  	.to(circle2, 2, {scale: 3.3 }, 0.3)
+  	.to(circle3, 2, { bezier: [{ autoAlpha: 0 }, { autoAlpha: 0.2 }, { autoAlpha: 0.5 }, { autoAlpha: 0 }], ease: Power3.easeOut }, 0)
+  	.to(circle3, 2, {scale: 3 }, 0)
   	;
 }
-var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
 
+// Kill pulse
+var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
 sliderHandleTarget.addEventListener("mousedown", killPulse);
 
 function killPulse() {
-	TweenMax.set(circles, { autoAlpha: 0 });
+	TweenMax.to(pulseCircs, 0.2, { autoAlpha: 0 });
 	tlPulse.kill();
 };
 

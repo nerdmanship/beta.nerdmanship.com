@@ -70,6 +70,7 @@ tlFinish
     cycle:{ x: posArr },
     ease: Power2.easeOut
   }, 0, 0)
+  .from(bgSVG, 6, {y: "-=50" }, 0)
 ;
 
 
