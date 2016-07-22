@@ -183,11 +183,10 @@ function killPulse() {
 var hasScrolled = false;
 
 window.addEventListener("scroll", function() {
-  hasScrolled = true;
-  mixpanel.track("Scrolled");
-  if (indicator) {
+  if (!(hasScrolled)) {
+    hasScrolled = true;
+    mixpanel.track("didScroll");
     header.removeChild(indicator);
-    indicator = null;
   }
 });
 
