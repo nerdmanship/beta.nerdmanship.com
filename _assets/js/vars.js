@@ -15,6 +15,7 @@ var
   tlFinish = new TimelineMax(),
   tlText = new TimelineMax(),
   tlScrubber = new TimelineMax(),
+  tlIndicator = new TimelineMax(),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
@@ -30,7 +31,8 @@ var
 
   // REFERENCES
   nerdmanship = select("#nerdmanship"),
-  container = select(".header"),
+  header = select(".header"),
+  indicator = select("#scrollDownIndicator"),
   scrubbSVG = select("#scrubbSVG"),
   scrubbProgress = select("#scrubbProgress"),
   scrubbRail = select("#scrubbRail"),
@@ -112,16 +114,16 @@ var
   backSnap = "-=180",
   backSnapP = "-=280",
 
-  base = "hsla(160, 10%, 70%, 1)";
-  white = "hsla(60, 20%, 95%, 1)";
-  bright = "hsla(160, 10%, 90%, 1)";
-  light = "hsla(160, 10%, 80%, 1)";
-  shade = "hsla(160, 5%, 40%, 1)";
-  dark = "hsla(160, 5%, 20%, 1)";
-  black = "hsla(160, 5%, 10%, 1)";
+  base = "hsla(160, 10%, 70%, 1)",
+  white = "hsla(60, 20%, 95%, 1)",
+  bright = "hsla(160, 10%, 90%, 1)",
+  light = "hsla(160, 10%, 80%, 1)",
+  shade = "hsla(160, 5%, 40%, 1)",
+  dark = "hsla(160, 5%, 20%, 1)",
+  black = "hsla(60, 5%, 10%, 1)",
 
-  pink = "#d46",
-  darkPink = "#9e1d3a",
+  pink = "hsla(347, 69%, 57%, 1)",
+  darkPink = "hsla(347, 69%, 37%, 1)",
 
   logoText = selectAll(".logoText"),
   upperText = new SplitText(".logoUpper", {type:"words,chars"}), 

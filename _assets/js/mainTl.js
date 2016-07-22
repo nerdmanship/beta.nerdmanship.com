@@ -7,6 +7,7 @@ tl
   .add("start")
   .add(tlAnimIn, "start")
   .add(tlFlicker, "start")
+  .call(revealIndicator)
   
   .add("viewbox", 3)
   .add(tlViewBox, "viewbox")
@@ -24,8 +25,9 @@ tl
   .add(tl_P, "animate =+2.44")
   
   .add("finish", 6.5)
+  
   .add(tlFinish, "finish")
   .add(tlText, "finish")
   .add(bgTl, "finish") // 4s
-  .call(showScrubber)
+  .call(showScrubber, [""], this, "finish =+4")
 ;

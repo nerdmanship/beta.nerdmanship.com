@@ -2,16 +2,19 @@
 
 $logoFont: 'Geo', sans-serif;
 
-$white: hsla(60, 20%, 95%, 1);
+$white: hsla(60, 30%, 85%, 1);
+$offWhite: hsla(60, 15%, 80%, 1);
 
-$base: hsla(160, 10%, 70%, 1);
+$pink: hsla(347, 69%, 57%, 1);
+
+$base: hsla(347, 69%, 57%, 1);
 $bright: lighten($base, 20);
 $light: lighten($base, 10);
 $shade: desaturate(darken($base, 30), 5);
 $dark: desaturate(darken($base, 50), 5);
 $black: desaturate(darken($base, 60), 5);
 
-$pink: #d46;
+
 $scrubbW: 40%;
 
 
@@ -23,7 +26,7 @@ body {
 
 #main p {
 	font-family: Courier,monospace;
-	color: $base;
+	color: $white;
 	font-size: 1.3em;
     background-color: transparent;
     border: none;
@@ -87,11 +90,12 @@ body {
 //-----------------------
 
 #header { max-width: none; }
+#header > .columns { padding: 0; }
 
 .header {
 	position: relative;
 	width: 100%;
-	height: 95vh;
+	height: 93vh;
 	min-height: 550px;
 	margin: 0;
 	padding: 0;
@@ -124,7 +128,7 @@ body {
 
 		opacity: 0;
 		.box { visibility: hidden; }
-		#charGroup { fill: #F2F2EB; }
+		#charGroup { fill: $white; }
 	}
 
 	.logoText {
@@ -133,23 +137,33 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 
-		color: $base;
+		color: $white;
 		font: 2em $logoFont;
 		text-transform: uppercase;
 		letter-spacing: 0.0625em;
 	}
 
 	.logoUpper { top: 25%; }
-	.logoLower { top: 55%; min-width: 260px; }
+	.logoLower { 
+		@include breakpoint(medium) {
+    		top: 55%;	
+  		}
+  		top: 50%;
+  		min-width: 260px;
+  	}
 
 	.gradient {
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to bottom, rgba(24,27,26,0) 0%,rgba(24,27,26,0) 60%,rgba(24,27,26,1) 100%);
+		background: linear-gradient(to bottom, rgba(24,27,26,0) 0%, rgba(24,27,26,0) 30%, $black 100%);
 		z-index: -1;
 	}
 
 	.controllerContainer {
+		@include breakpoint(medium) {
+    		visibility: visible;
+  		}
+  		visibility: hidden;
 		position: absolute;
 		top: 51%;
 		left: 50%;
@@ -214,7 +228,15 @@ body {
 	}
 }
 
-
+#scrollDownIndicator {
+	width: 30px;
+	position: absolute;
+	bottom: -2%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0; 
+	circle { fill: hsla(0, 0%, 100%, 1); }
+}
 
 //-----------------------
 // MAIN CONTENT

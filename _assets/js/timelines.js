@@ -16,7 +16,7 @@ tlAnimIn
 //––––––––––––––––––––
 // FLICKER
 //––––––––––––––––––––
-tlFlicker
+/*tlFlicker
   .to(theN, flicDur, { fill: "hsla(160, 5%, 50%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
   .to(theE, flicDur, { fill: "hsla(160, 5%, 60%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
   .to(theR, flicDur, { fill: "hsla(160, 5%, 70%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
@@ -35,8 +35,22 @@ tlFlicker
   .to(theH, flicDur, { fill: "hsla(160, 5%, 70%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
   .to(theI, flicDur, { fill: "hsla(160, 5%, 60%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
   .to(theP, flicDur, { fill: "hsla(160, 5%, 50%, 1)", ease: RoughEase.ease.config(configObj)}, 0, 0)
-;
+;*/
 
+// ----------
+
+function makeFlickerTl(parentTL) {
+  
+  logoLetters = Array.from(chars);
+  
+  logoLetters.reduce(function(parent, letter) {
+    var tl = new TimelineMax();
+    tl.to(letter, flicDur, { fill: white, ease: RoughEase.ease.config(configObj)}, 0, 0);
+    return parent.add(tl, 0);
+  }, parentTL);
+}
+
+makeFlickerTl(tlFlicker);
 
 
 //––––––––––––––––––––
@@ -83,9 +97,6 @@ tlText
   .staggerFrom(upperLetters, 5, {autoAlpha:0, rotationY:90, transformOrigin:"0% 50% -50%", ease: Power3.easeOut }, 0.05, 0)
   .staggerFrom(lowerLetters, 5, {autoAlpha:0, rotationY:90, transformOrigin:"0% 50% -50%", ease: Power3.easeOut }, 0.05, 1.2)
   ;
-
-
-
 
 
 
