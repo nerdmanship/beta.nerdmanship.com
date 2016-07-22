@@ -154,11 +154,8 @@ body {
 
 	.logoUpper { top: 25%; }
 	.logoLower { 
-		@include breakpoint(medium) {
-    		top: 55%;	
-  		}
+		@include breakpoint(medium) { top: 55%;	}
   		top: 50%;
-  		min-width: 260px;
   	}
 
 	.gradient {
