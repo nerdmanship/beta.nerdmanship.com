@@ -184,6 +184,7 @@ var hasScrolled = false;
 
 window.addEventListener("scroll", function() {
   hasScrolled = true;
+  mixpanel.track("Scrolled");
   if (indicator) {
     header.removeChild(indicator);
     indicator = null;
