@@ -31,9 +31,12 @@ body {
 }
 
 #main p {
+	@include breakpoint(medium) {
+    	font-size: 1.3em;
+	}
 	font-family: Courier,monospace;
 	color: $white;
-	font-size: 1.3em;
+	font-size: 0.85em;
     background-color: transparent;
     border: none;
 }
@@ -156,6 +159,7 @@ body {
 	.logoLower { 
 		@include breakpoint(medium) { top: 55%;	}
   		top: 50%;
+  		min-width: 195px;
   	}
 
 	.gradient {
@@ -251,7 +255,6 @@ body {
 .presentation {
 	position: relative;
 	top: 2rem;
-	font-size: 0.8em;
 
 	.shiny {
 		color: $pink;
