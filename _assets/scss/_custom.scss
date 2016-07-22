@@ -138,13 +138,16 @@ body {
 	}
 
 	.logoText {
+		@include breakpoint(medium) {
+    		font: 2em $logoFont;
+  		}
 		opacity: 0;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 
 		color: $white;
-		font: 2em $logoFont;
+		font: 1.5em $logoFont;
 		text-transform: uppercase;
 		letter-spacing: 0.0625em;
 	}
