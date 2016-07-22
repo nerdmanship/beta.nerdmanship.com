@@ -1,4 +1,10 @@
-@import 'https://fonts.googleapis.com/css?family=Geo:400i';
+@font-face {
+  font-family: 'Geo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Geo'), local('Geo-Regular'), url(https://fonts.gstatic.com/s/geo/v8/u6xYViAS7oZBWuSBY2LiDw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 
 $logoFont: 'Geo', sans-serif;
 
