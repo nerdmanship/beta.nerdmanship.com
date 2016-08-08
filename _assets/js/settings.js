@@ -21,7 +21,7 @@ tlStart
   .to(unit1s, 0, { rotation: 90 })
   .to(charGroup, 0, { x: 100, scaleX: 0.9, scaleY: 0.7, transformOrigin: "center" }, 0)
   
-  .staggerTo(chars, 0, { fill: black,
+  .staggerTo(chars, 0, { fill: "hsla(347, 64%, 7%, 1)",
     cycle:{
       x:function(i){
         return (i * 200);

@@ -7,7 +7,6 @@ tl
   .add("start")
   .add(tlAnimIn, "start")
   .add(tlFlicker, "start")
-  .call(revealIndicator)
   
   .add("viewbox", 3)
   .add(tlViewBox, "viewbox")

@@ -31,7 +31,8 @@ var
 
   // REFERENCES
   nerdmanship = select("#nerdmanship"),
-  header = select(".header"),
+  kineticType = select(".kineticType"),
+  headerBackground = select(".headerBackground"),
   indicator = select("#scrollDownIndicator"),
   scrubbSVG = select("#scrubbSVG"),
   scrubbProgress = select("#scrubbProgress"),

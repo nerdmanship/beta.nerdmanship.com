@@ -14,7 +14,7 @@ function makeBg(side, gutter, rows) {
   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
   // Add the background SVG element to the DOM
-  header.appendChild(svg);
+  headerBackground.appendChild(svg);
 
   // Give the background SVG element attributes
   svg.setAttribute("id", "bgSVG");
@@ -37,7 +37,7 @@ function makeBg(side, gutter, rows) {
     r.setAttribute("height", rSide);
     r.setAttribute("class", "rectangle rectangle" +i);
     r.setAttribute("data-rect-id", i);
-    r.setAttribute("fill", "hsla(" + random(160, 165) + ", 40%, " + random(10, 20)+ "% , 1)");
+    r.setAttribute("fill", "hsla(" + random(345, 350) + ", 40%, " + random(10, 20)+ "% , 1)");
 
     // Give each rect a unique position
     if(i < rowBreak ) {
@@ -49,7 +49,7 @@ function makeBg(side, gutter, rows) {
     } 
   }
 }
-makeBg(30, 1, 11); // Side, gutter, rows
+makeBg(30, 1, 6); // Side, gutter, rows
 
 
 
@@ -175,28 +175,6 @@ function killPulse() {
 	tlPulse.kill();
 };
 
-
-
-//––––––––––––––––––––––––––––––––––––––––––––––––––––
-// REVEAL INDICATOR
-//––––––––––––––––––––––––––––––––––––––––––––––––––––
-var hasScrolled = false;
-
-window.addEventListener("scroll", function() {
-  if (!(hasScrolled)) {
-    hasScrolled = true;
-    mixpanel.track("didScroll");
-    header.removeChild(indicator);
-  }
-});
-
-function revealIndicator() {
-  if (!(hasScrolled)) {
-    TweenMax.to(indicator, 1, { autoAlpha: 1 });
-  } else {
-    console.log("No need to indicate");
-  }
-}
 
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
