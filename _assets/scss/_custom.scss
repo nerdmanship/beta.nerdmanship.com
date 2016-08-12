@@ -36,7 +36,8 @@ h2 {
 }
 
 .logoText {
-	font: 1.4em $logoFont;
+	font: 1.3em $logoFont;
+	@include breakpoint(medium) { font-size: 1.5em ; }
 	text-transform: uppercase;
 	letter-spacing: 0.0625em;
 }
