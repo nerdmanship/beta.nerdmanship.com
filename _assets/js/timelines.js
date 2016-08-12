@@ -60,13 +60,14 @@ makeFlickerTl(tlFlicker);
 tlViewBox
   .add("toNerd")
   .to(nerdmanship, 0.2, { rotation: -20, skewX: 30, attr: {viewBox: "980 -50 1500 50"} }, "toNerd")
-  .to(nerdmanship, 0.1, { rotation: -10, skewX: 20, attr: {viewBox: "1080 -50 900 50"} }, "toNerd =+0.2")
-  .to(nerdmanship, 0.1, { attr: {viewBox: "1000 -50 800 50"} }, "toNerd =+0.7")
+  .to(nerdmanship, 0.1, { rotation: -10, skewX: 20, attr: {viewBox: "950 -50 1000 50"} }, "toNerd =+0.2")
+  .to(nerdmanship, 0.1, { attr: {viewBox: "825 -50 1100 50"} }, "toNerd =+0.6")
   .add("toMan", "toNerd =+1.2")
-  .to(nerdmanship, 0.3, { rotation: -20, skewX: 35, attr: {viewBox: "1700 -50 1000 50"} },"toMan")
-  .to(nerdmanship, 0.2, { rotation: -15, skewX: 25,attr: {viewBox: "1700 -50 900 50"} }, "toMan =+0.6")
-  .add("toShip", "toMan =+1.2")
+  .to(nerdmanship, 0.3, { rotation: -20, skewX: 35, attr: {viewBox: "1600 -50 1100 50"} },"toMan")
+  .to(nerdmanship, 0.2, { rotation: -15, skewX: 25,attr: {viewBox: "1600 -50 950 50"} }, "toMan =+0.6")
+  .add("toShip", "toMan =+1.1")
   .to(nerdmanship, 0.3, { rotation: -10, skewX: 20, attr: {viewBox: "2100 -50 1200 50"} }, "toShip")
+  .to(nerdmanship, 0.2, { rotation: -5, skewX: 10, attr: {viewBox: "2150 -50 1100 50"} }, "toShip =+0.65")
   .add("toNerdmanship", "toShip =+1.0")
   .to(nerdmanship, 0.2, { rotation: 0, skewX: 0, attr: {viewBox: "0 0 4000 50"} }, "toNerdmanship")
   ;
@@ -108,9 +109,9 @@ tlText
 
 tlGlow
   .to(chars, 3, { fill: logoEnd })
-  .to("#glowWide", 5, { autoAlpha: 0.25, ease: Back.easeOut  }, 1)
-  .to("#glowSlim", 3, { autoAlpha: 0.05, ease: Back.easeOut }, 3)
-  .to("#glowSlim", 3, { attr:{ cy: 390, rx: 650, ry:20}, ease: Back.easeOut }, 3)
+  .to("#glowWide", 5, { autoAlpha: 0.25 }, 1)
+  .to("#glowSlim", 3, { autoAlpha: 0.05, ease: Back.easeOut }, 2)
+  .to("#glowSlim", 3, { attr:{ cy: 390, rx: 650, ry:20}, ease: Back.easeOut }, 2)
   ;
 
 
