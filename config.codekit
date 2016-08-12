@@ -126,7 +126,7 @@
 	"\/_assets\/jade\/includes\/testController.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.html",
@@ -144,15 +144,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
-		},
-	"\/_assets\/jade\/svgs\/bg.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/bg.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/_assets\/jade\/svgs\/bg.jade": {
 		"compileDebug": 1,
@@ -172,6 +163,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/denseChain.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/denseChain.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/glow.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/glow.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/glow.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/glowBg.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/glowBg.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/glowBg.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -198,15 +211,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/_assets\/jade\/svgs\/sliderHandle.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/sliderHandle.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_assets\/jade\/svgs\/sliderHandle.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -218,15 +222,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/_assets\/jade\/svgs\/socialCodepen.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialCodepen.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_assets\/jade\/svgs\/socialCodepen.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -237,15 +232,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
-		},
-	"\/_assets\/jade\/svgs\/socialFacebook.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialFacebook.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/_assets\/jade\/svgs\/socialFacebook.jade": {
 		"compileDebug": 1,

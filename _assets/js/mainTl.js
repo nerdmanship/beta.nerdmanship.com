@@ -28,5 +28,6 @@ tl
   .add(tlFinish, "finish")
   .add(tlText, "finish")
   .add(bgTl, "finish") // 4s
+  .add(tlGlow, "finish =+3")
   .call(showScrubber, [""], this, "finish =+4")
 ;

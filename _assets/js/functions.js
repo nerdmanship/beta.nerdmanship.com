@@ -37,7 +37,7 @@ function makeBg(side, gutter, rows) {
     r.setAttribute("height", rSide);
     r.setAttribute("class", "rectangle rectangle" +i);
     r.setAttribute("data-rect-id", i);
-    r.setAttribute("fill", "hsla(" + random(345, 350) + ", 40%, " + random(10, 20)+ "% , 1)");
+    r.setAttribute("fill", "hsla(200, 40%, " + random(10, 15)+ "% , 1)");
 
     // Give each rect a unique position
     if(i < rowBreak ) {

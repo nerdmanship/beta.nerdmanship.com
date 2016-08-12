@@ -1,3 +1,8 @@
+//-----------------------
+// TYPOGRAPHY
+//-----------------------
+
+// This is...
 @font-face {
   font-family: 'Geo';
   font-style: normal;
@@ -6,39 +11,19 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+// Vars
 $logoFont: 'Geo', sans-serif;
 $copyFont: 'Open Sans', sans-serif;
 $headlineFont: 'Rubik One', sans-serif;
 
-$white: hsla(60, 30%, 85%, 1);
-$offWhite: hsla(60, 15%, 80%, 1);
-
-$pink: hsla(347, 69%, 57%, 1);
-
-$base: hsla(347, 69%, 57%, 1);
-$bright: lighten($base, 20);
-$light: lighten($base, 10);
-$shade: desaturate(darken($base, 30), 5);
-$dark: desaturate(darken($base, 50), 5);
-$black: desaturate(darken($base, 60), 5);
-
-$scrubbW: 40%;
-
-html { background: $dark; }
 body {
-	position: relative;
-	font-family: $copyFont;
-	background: $dark;
-	color: $white;
 	font-size: 18px;
-	@include breakpoint(medium) {
-    	margin-bottom: 80vh;
-  	}
-	margin-bottom: 0;
-	height: auto;
+	letter-spacing: 1px;
+	font-family: $copyFont;
 }
 
-h1 {
+h1,
+h2 {
 	font-family: $headlineFont;
 	text-transform: uppercase;
 	line-height: 1;
@@ -46,13 +31,112 @@ h1 {
 }
 
 h2 {
-	font-size: 0.7em;
-	@include breakpoint(medium) {
-    	font-size: 1.5em;
-  	}
-	letter-spacing: 1.5px;
+	font-size: 0.6em;
+	@include breakpoint(medium) { font-size: 1.1em; }
+}
+
+.logoText {
+	font: 1.3em $logoFont;
 	text-transform: uppercase;
-	line-height: 1;
+	letter-spacing: 0.0625em;
+}
+
+.button { font: 1em $headlineFont; text-transform: uppercase; }
+
+.micro { font-size: 0.8em;	}
+	
+footer .copyright {
+		font-size: 0.8em;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-weight: 700;
+	}
+
+//-----------------------
+// COLORS & STYLE
+//-----------------------
+
+// Vars
+$white: hsla(0, 0%, 100%, 1);
+$black: hsla(0, 0%, 0%, 1);
+$transparent: hsla(0, 0%, 0%, 0);
+
+$offWhite: hsla(40, 100%, 90%, 1);
+$yellow: hsla(40, 90%, 65%, 1);
+$neon: hsla(150, 20%, 90%, 1);
+$background: hsla(200, 40%, 5%, 1);
+$interactive: hsla(345, 70%, 50%, 1);
+
+// Main elements
+html { background: $background; }
+body { background: $background; color: $offWhite; }
+footer { background-color: lighten($background, 3); }
+h1 { color: $yellow; }
+h2 { color: desaturate($yellow, 50); }
+p { color: $offWhite; }
+strong { color: $yellow; }
+
+// Header
+#bgSVG { fill: $background; }
+#charGroup { fill: $neon; }
+.glow ellipse { fill: $neon; }
+.logoText {	color: darken($neon, 30); }
+.gradient {	background: linear-gradient(to bottom, $transparent 0%, $transparent 30%, $background 100%); }
+#scrubbSVG { #scrubbProgress { stroke: $interactive; } #scrubbRail { stroke: darken(desaturate($interactive, 50), 20); } }
+#sliderHandle {	fill: $interactive; }
+#discoverySlider { background: $transparent; } // Hides real slider UI
+
+// Form
+#mce-EMAIL{
+	color: $interactive;
+	border-color: $interactive;
+	background-color: transparent;
+	&::placeholder { color: $interactive; opacity: 0.7; }
+	&:focus { box-shadow: 0 0 5px $interactive; }
+}
+
+.button { background-color: $interactive; }
+.micro { color: desaturate(lighten($background, 25), 20); }
+
+// Footer
+.socialIcon {
+	fill: $offWhite;
+	circle { fill: black; opacity: 0.01; }
+}
+
+.copyright p { color: desaturate(lighten($background, 25), 20); }
+
+// Style
+.button,
+.email { border-radius: 5px;}
+
+
+
+//-----------------------
+// LAYOUT
+//-----------------------
+
+// Vars
+
+$scrubbW: 40%;
+
+// z-index
+$footerIndex: -1;
+
+$ui-slider-rangeIndex: 1;
+$sliderHandleIndex: 2;
+$ui-slider-handleIndex: 3;
+
+
+// Main elements
+
+body {
+	position: relative;
+	@include breakpoint(medium) {
+    	margin-bottom: 80vh;
+  	}
+	margin-bottom: 0;
+	height: auto;
 }
 
 p {
@@ -74,19 +158,161 @@ section {
 	}
 }
 
+.button { padding: 0.5em 1em }
+
 #presentation,
-#disclaimer,
-footer {
+#disclaimer {
 	padding: 4em 0;
 }
 
-.headline {
+.headlineGroup {
 	margin-bottom: 2em;
 }
 
-//-----------------------
-// JQUERY UI SLIDER
-//-----------------------
+
+
+// Header
+
+header .row { max-width: none; }
+header .columns { padding: 0; }
+
+.kineticType {
+	position: relative;
+	width: 100%;
+	@include breakpoint(medium) {
+		height: 95vh;
+		min-height: 34em;
+	}
+	height: 80vh;
+	min-height: 22em;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	.headerBackground,
+	.glowContainer {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.glowContainer {
+		min-width: 450px;
+		max-width: 1280px;
+	}
+	#glowWide,
+	#glowSlim { opacity: 0; }
+ 	#bgSVG {
+		position: absolute;
+		min-width: 45em;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		overflow: visible;
+	}
+
+	#nerdmanship {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		min-height: 400px;
+		min-width: 450px;
+		max-width: 1280px;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		overflow: visible;
+		opacity: 0;
+		.box { visibility: hidden; }
+	}
+
+	.logoText {
+		opacity: 0;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.logoUpper { top: 25%; }
+	.logoLower { 
+		@include breakpoint(medium) { top: 55%;	}
+  		top: 50%;
+  		min-width: 195px;
+  	}
+
+	.gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.controllerContainer {
+		@include breakpoint(medium) {
+    		visibility: visible;
+  		}
+  		visibility: hidden;
+		position: absolute;
+		top: 51%;
+		left: 50%;
+		transform: translate(-50%);
+		width: $scrubbW;
+		min-width: 250px;
+		height: 0.25em;
+	
+		.sliderContainer {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			overflow: hidden;
+			#scrubbSVG {
+				visibility: hidden;
+				position: absolute;
+				width: 100%;
+			}
+		}
+		#sliderHandle {
+			position: absolute;
+			z-index: $sliderHandleIndex;
+			height: 10px;
+			top: 50%;
+			overflow: visible;
+			.circle1,		
+			.circle2,
+			.circle3,
+			.circle4 { visibility: hidden; }
+		}
+		#discoverySlider {
+			position: absolute;
+			top:0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			border: none;
+			cursor: pointer;
+			.ui-slider-handle {
+				position: absolute;
+			    z-index: $ui-slider-handleIndex;
+			    width: 20px;
+			    height: 20px;
+				background: transparent;
+				cursor: pointer;
+			    touch-action: none;
+			    border: none;
+			    border-radius: 20px;
+			    margin-left: -10px;
+			    top: -200%;
+			}
+			.ui-state-focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+
+
+// JQuery UI slider
 
 .ui-slider {
 	position: relative;
@@ -94,7 +320,7 @@ footer {
 }
 .ui-slider .ui-slider-handle {
 	position: absolute;
-	z-index: 2;
+	z-index: $ui-slider-handleIndex;
 	width: 1.2em;
 	height: 1.2em;
 	cursor: default;
@@ -103,7 +329,7 @@ footer {
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
-	z-index: 1;
+	z-index: $ui-slider-rangeIndex;
 	font-size: .7em;
 	display: block;
 	border: 0;
@@ -135,177 +361,11 @@ footer {
 }
 
 
-//-----------------------
-// HEADER
-//-----------------------
 
-header .row { max-width: none; }
-header .columns { padding: 0; }
-
-.kineticType {
-	position: relative;
-	width: 100%;
-	@include breakpoint(medium) {
-		height: 95vh;
-		min-height: 34em;
-	}
-	height: 80vh;
-	min-height: 22em;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	.headerBackground{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
- 	#bgSVG {
-		position: absolute;
-		min-width: 45em;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		margin: 0;
-		overflow: visible;
-		fill: $dark;
-	}
-
-	#nerdmanship {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		min-height: 400px;
-		min-width: 450px;
-		max-width: 1280px;
-		left: 50%;
-		top: 40%;
-		transform: translate(-50%, -50%);
-		margin: 0;
-		overflow: visible;
-
-		opacity: 0;
-		.box { visibility: hidden; }
-		#charGroup { fill: $white; }
-	}
-
-	.logoText {
-		@include breakpoint(medium) {
-    		font: 2em $logoFont;
-  		}
-		opacity: 0;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-
-		color: $white;
-		font: 1.3em $logoFont;
-		text-transform: uppercase;
-		letter-spacing: 0.0625em;
-	}
-
-	.logoUpper { top: 25%; }
-	.logoLower { 
-		@include breakpoint(medium) { top: 55%;	}
-  		top: 50%;
-  		min-width: 195px;
-  	}
-
-	.gradient {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(to bottom, rgba(24,27,26,0) 0%, rgba(24,27,26,0) 30%, $dark 100%);
-	}
-
-	.controllerContainer {
-		@include breakpoint(medium) {
-    		visibility: visible;
-  		}
-  		visibility: hidden;
-		position: absolute;
-		top: 51%;
-		left: 50%;
-		transform: translate(-50%);
-		width: $scrubbW;
-		min-width: 250px;
-		height: 0.25em;
-	
-		.sliderContainer {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			border-radius: 10px;
-			overflow: hidden;
-			#scrubbSVG {
-				visibility: hidden;
-				position: absolute;
-				width: 100%;
-				#scrubbProgress { stroke: $pink; }
-				#scrubbRail { stroke: $dark; }
-			}
-		}
-		#sliderHandle {
-			position: absolute;
-			z-index: 2;
-			height: 10px;
-			top: 50%;
-			overflow: visible;
-			fill: $pink;
-			.circle1,		
-			.circle2,
-			.circle3,
-			.circle4 { visibility: hidden; }
-			.circle4 { fill: rgba(0, 0, 0, 0.3); }
-		}
-		#discoverySlider {
-			position: absolute;
-			top:0;
-			width: 100%;
-			height: 100%;
-			border-radius: 10px;
-			border: none;
-			cursor: pointer;
-			background: rgba(255,255,255, 0);
-			.ui-slider-handle {
-				position: absolute;
-			    z-index: 3;
-			    width: 20px;
-			    height: 20px;
-				background: transparent;
-				cursor: pointer;
-			    touch-action: none;
-			    border: none;
-			    border-radius: 20px;
-			    margin-left: -10px;
-			    top: -200%;
-			}
-			.ui-state-focus {
-				outline: none;
-			}
-		}
-	}
-}
-
-
-
-//-----------------------
-// MAIN CONTENT
-//-----------------------
+// Form
 
 #signupFormContainer {
 	margin: 1em auto;
-	#mce-EMAIL{
-		color: $pink;
-		border-color: $pink;
-		background-color: transparent;
-		&::placeholder {
-			color: $pink;
-			opacity: 0.7;
-		}
-		&:focus {
-			box-shadow: 0 0 5px $pink;	
-		}
-	}
 	.buttonGroup, .mc-field-group {
 		display: inline-block;
 		width: 100%;
@@ -315,43 +375,29 @@ header .columns { padding: 0; }
 	}
 }
 
-//-----------------------
-// FOOTER
-//-----------------------
+
+
+// Footer
+
 footer {
-	@include breakpoint(medium) {
-    	position: fixed;
-    	z-index: -1;
-  	}
+
+	// Footer uncover style on all devices but small
+	@include breakpoint(medium) { position: fixed; z-index: $footerIndex; padding-top: 5em; }
+	
 	position: relative;
 	width: 100%;
-	min-height: 80vh;
 	bottom: 0;
-	background-color: $dark;
-	.row { padding: 1em 0; }
-	a {
-		font-weight: 700;
-		letter-spacing: 1px;
-		text-decoration: underline;
-	}
+	
+	.row { padding: 1.2em 0; }
+	
 	p { margin-bottom: 0; }
-	.copyright {
-		font-size: 0.8em;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		font-weight: 700;
-	}
+	.button { margin-bottom: 0; min-width: 15em; }
+
 }
+
 .socialLink {
 	width: 50px;
 	margin: 0 1em;
-	.socialIcon {
-		fill: $white;
-		circle {
-			fill: black;
-			opacity: 0.01;
-		}
-	}
 }
 
 

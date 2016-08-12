@@ -13,6 +13,8 @@ TweenMax.set(bgRects, { transformOrigin: "center" });
 TweenMax.set(circle1, { transformOrigin: "center", scale: 0, autoAlpha:1 });
 TweenMax.set(circle4, { xPercent: "-50%" });
 
+
+
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // STARTING POSITION CHARACTERS
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -21,7 +23,7 @@ tlStart
   .to(unit1s, 0, { rotation: 90 })
   .to(charGroup, 0, { x: 100, scaleX: 0.9, scaleY: 0.7, transformOrigin: "center" }, 0)
   
-  .staggerTo(chars, 0, { fill: "hsla(347, 64%, 7%, 1)",
+  .staggerTo(chars, 0, { fill: logoStart,
     cycle:{
       x:function(i){
         return (i * 200);

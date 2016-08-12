@@ -45,7 +45,7 @@ function makeFlickerTl(parentTL) {
   
   logoLetters.reduce(function(parent, letter) {
     var tl = new TimelineMax();
-    tl.to(letter, flicDur, { fill: white, ease: RoughEase.ease.config(configObj)}, 0, 0);
+    tl.to(letter, flicDur, { fill: logoMid, ease: RoughEase.ease.config(configObj)}, 0, 0);
     return parent.add(tl, 0);
   }, parentTL);
 }
@@ -101,9 +101,17 @@ tlText
 
 
 
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// GLOW ANIMATION
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-
+tlGlow
+  .to(chars, 3, { fill: logoEnd })
+  .to("#glowWide", 5, { autoAlpha: 0.25, ease: Back.easeOut  }, 1)
+  .to("#glowSlim", 3, { autoAlpha: 0.05, ease: Back.easeOut }, 3)
+  .to("#glowSlim", 3, { attr:{ cy: 390, rx: 650, ry:20}, ease: Back.easeOut }, 3)
+  ;
 
 
 
