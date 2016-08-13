@@ -175,6 +175,12 @@ function killPulse() {
 	tlPulse.kill();
 };
 
+// Glowing H1 for scroll indication
+function scrollIndication() {
+  tlScroll.play();
+  console.log("scroll indicator triggered")
+}
+
 
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––

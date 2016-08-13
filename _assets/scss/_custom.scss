@@ -87,6 +87,10 @@ strong { color: $yellow; }
 #sliderHandle {	fill: $interactive; }
 #discoverySlider { background: $transparent; } // Hides real slider UI
 
+
+// Presentation
+#presentation h1 { text-shadow: 0px -10px 150px $yellow; }
+
 // Form
 #mce-EMAIL{
 	color: $interactive;

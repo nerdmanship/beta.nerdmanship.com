@@ -16,6 +16,7 @@ var
   tlText = new TimelineMax(),
   tlScrubber = new TimelineMax(),
   tlGlow = new TimelineMax(),
+  tlScroll = new TimelineMax(),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
@@ -119,17 +120,7 @@ var
   backgroundTint = "hsla(200, 45%, 15%, 1)",
   logoMid = "hsla(150, 20%, 60%, 1)",
   logoEnd = "hsla(150, 20%, 80%, 1)",
-
-  base = "red",
-  white = "red",
-  bright = "red",
-  light = "red",
-  shade = "red",
-  dark = "red",
-  black = "red",
-
-  pink = "red",
-  darkPink = "red",
+  yellow = "hsla(40, 90%, 65%, 1)",
 
   logoText = selectAll(".logoText"),
   upperText = new SplitText(".logoUpper", {type:"words,chars"}), 
@@ -144,5 +135,7 @@ var
                 taper: "none",
                 randomize: true,
                 clamp: true
-              }
-  ;
+              },
+  h1Shadow = select("#presentation h1")
+;
+

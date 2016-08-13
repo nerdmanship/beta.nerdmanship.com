@@ -30,4 +30,5 @@ tl
   .add(bgTl, "finish") // 4s
   .add(tlGlow, "finish =+3")
   .call(showScrubber, [""], this, "finish =+6")
+  .call(scrollIndication, [""], this, "start")
 ;
