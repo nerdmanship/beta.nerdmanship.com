@@ -265,12 +265,9 @@ header .columns { padding: 0; }
 	}
 
 	.controllerContainer {
-		@include breakpoint(medium) {
-    		visibility: visible;
-  		}
-  		visibility: visible; // Change this to hide scrubber on mobile
+  		visibility: visible;
 		position: absolute;
-		top: 51%;
+		top: 90%; //51%
 		left: 50%;
 		transform: translate(-50%);
 		width: $scrubbW;
