@@ -5,7 +5,7 @@ include includes/scripts_mixin.jade
 // Clean up scripts before deployment
 //- Online
 - styles = ["https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css", "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", "css/app.css"]
-- scripts = ["https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js", "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/app-min.js", "js/jquery.ui.touch-punch.min.js"]
+- scripts = ["https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js", "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/app-min.js", "js/jquery.ui.touch-punch.min.js", "js/tracking.js"]
 
 
 //- Offline
@@ -20,5 +20,4 @@ html(class="no-js" lang="en")
 		include includes/main.jade
 		include includes/footer.jade
 		include includes/testController.jade
-		<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-81166586-1', 'auto');ga('send', 'pageview');</script>
 		+scripts

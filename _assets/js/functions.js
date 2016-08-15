@@ -175,9 +175,17 @@ function killPulse() {
 	tlPulse.kill();
 };
 
+
+document.onscroll=function(){
+  console.log("User scrolled");
+  mixpanel.track("Ping!");
+};
+
 // Glowing H1 for scroll indication
 function scrollIndication() {
-  TweenMax.fromTo(".glowDiv", 1.2, { width: "50%", autoAlpha: 0.5 }, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
+  tlScroll
+    .to(".glowDiv", 1.2, { width: "50%", autoAlpha: 0.5 })
+    .to(".glowDiv", 1.2, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
   console.log("scroll indicator triggered")
 }
 

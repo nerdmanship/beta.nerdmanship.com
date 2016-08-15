@@ -6,7 +6,7 @@ var selectAll = function(s) { return document.querySelectorAll(s); };
 
 var 
   // TIMELINES
-  tl = new TimelineMax({onUpdate:updateSlider, onComplete: scrollIndication}),
+  tl = new TimelineMax({onUpdate:updateSlider}),
   
   tlStart = new TimelineMax(),
   tlAnimIn = new TimelineMax(),
@@ -16,7 +16,6 @@ var
   tlText = new TimelineMax(),
   tlScrubber = new TimelineMax(),
   tlGlow = new TimelineMax(),
-  tlScroll = new TimelineMax( {paused: true} ),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
