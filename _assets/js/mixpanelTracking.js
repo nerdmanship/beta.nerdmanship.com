@@ -21,13 +21,13 @@ function trackFirstScroll() {
 sliderHandleTarget.addEventListener("mousedown", trackScrubberInteraction);
 
 function trackScrubberInteraction() {
-    mixpanel.track("Scrubbed", { "After" : triggerTime + " s" });
+    mixpanel.track("Scrubbed", { "After" : secondsPassed() + " s" });
     console.log(secondsPassed());
 }
 
 select("#mce-EMAIL").addEventListener("mousedown", trackFormClick);
 
 function trackFormClick() {
-    mixpanel.track("Clicked in email form", { "After" : triggerTime + " s" });
+    mixpanel.track("Clicked in email form", { "After" : secondsPassed() + " s" });
     console.log(secondsPassed());
 }
