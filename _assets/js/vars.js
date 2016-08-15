@@ -6,7 +6,7 @@ var selectAll = function(s) { return document.querySelectorAll(s); };
 
 var 
   // TIMELINES
-  tl = new TimelineMax({onUpdate:updateSlider}),
+  tl = new TimelineMax({onUpdate:updateSlider, onComplete: scrollGlow}),
   
   tlStart = new TimelineMax(),
   tlAnimIn = new TimelineMax(),
@@ -16,6 +16,7 @@ var
   tlText = new TimelineMax(),
   tlScrubber = new TimelineMax(),
   tlGlow = new TimelineMax(),
+  tlScroll = new TimelineMax(),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
@@ -46,6 +47,8 @@ var
   units = selectAll(".unit"),
   chars = selectAll(".chars"),
   charGroup = select("#charGroup"),
+
+  glowDiv = select(".glowDiv"),
   
   theN = select("#n"),
   theE = select("#e"),

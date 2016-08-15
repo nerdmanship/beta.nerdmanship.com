@@ -175,18 +175,34 @@ function killPulse() {
 	tlPulse.kill();
 };
 
+var haveScrolled = false;
 
-document.onscroll=function(){
-  console.log("User scrolled");
-  mixpanel.track("Ping!");
+document.onscroll = function(){
+  if (!(haveScrolled)) {
+    haveScrolled = true;  
+    console.log("User scrolled");
+    mixpanel.track("First scroll");
+    killScrollGlow();
+  }
 };
 
-// Glowing H1 for scroll indication
-function scrollIndication() {
-  tlScroll
-    .to(".glowDiv", 1.2, { width: "50%", autoAlpha: 0.5 })
-    .to(".glowDiv", 1.2, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
-  console.log("scroll indicator triggered")
+// Fade in and repeat scroll indicator glow
+function scrollGlow() {
+  if (!(haveScrolled)) {
+    setTimeout(function() {
+      tlScroll
+        .to(glowDiv, 1.2, { width: "50%", autoAlpha: 0.5 })
+        .to(glowDiv, 1.2, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
+    }, 5000);
+  }
+}
+
+// Fade out and remove scroll indicator glow
+function killScrollGlow() {
+  TweenMax.to(glowDiv, 0.5, { autoAlpha: 0 });
+  setTimeout(function() {
+    tlScroll.kill();
+  }, 600);
 }
 
 
