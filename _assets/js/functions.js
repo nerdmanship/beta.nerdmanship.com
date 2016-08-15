@@ -121,6 +121,7 @@ var sliderHandleTarget = select("#discoverySlider .ui-slider-handle");
 sliderHandleTarget.addEventListener("mouseover", focusHandle);
 sliderHandleTarget.addEventListener("mouseleave", blurHandle);
 
+
 function focusHandle(){
 	TweenMax.to(circle1, 0.1, { scale: 1.2 });
 }

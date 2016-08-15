@@ -136,7 +136,6 @@ var
                 taper: "none",
                 randomize: true,
                 clamp: true
-              },
-  h1Shadow = select("#presentation h1")
+              }
 ;
 
