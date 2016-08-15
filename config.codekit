@@ -7381,6 +7381,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/public_html\/js\/jquery.ui.touch-punch.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public_html\/js\/jquery.ui.touch-punch.min.js",
+		"outputAbbreviatedPath": "\/public_html\/js\/min\/jquery.ui.touch-punch.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/public_html\/js\/min\/jquery.ui.touch-punch.min-min.js": {
 		"fileType": 64,
 		"ignore": 1,
