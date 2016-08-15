@@ -140,9 +140,6 @@ var showing = false;
 function showScrubber() {
   if (!(showing)) {
     showing = true;
-    
-    // Touch event hack
-    //$(".ui-slider-handle").draggable();
 
     var tl = new TimelineMax();
 
@@ -237,3 +234,5 @@ function updateSlider() {
   TweenMax.set(scrubbProgress, {drawSVG: tl.progress()*100 + "%"});
   TweenMax.set(sliderHandle, {left: tl.progress()*100 + "%"});
 }
+
+$(".ui-slider-handle").draggable();
