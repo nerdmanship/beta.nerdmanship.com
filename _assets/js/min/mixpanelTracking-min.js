@@ -1,0 +1,1 @@
+function trackFirstScroll(){triggerTime=Math.floor(((new Date).getTime()-loadTime)/1e3),console.log(triggerTime),mixpanel.track("First scroll",{"Time passed":triggerTime})}var loadTime=(new Date).getTime(),triggerTime;

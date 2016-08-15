@@ -352,6 +352,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_assets\/js\/min\/mixpanelTracking-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/js\/min\/mixpanelTracking-min.js",
+		"outputAbbreviatedPath": "\/_assets\/js\/min\/min\/mixpanelTracking-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_assets\/js\/min\/productionControls-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -413,6 +424,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/js\/min\/vars-min.js",
 		"outputAbbreviatedPath": "\/_assets\/js\/min\/min\/vars-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_assets\/js\/mixpanelTracking.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/js\/mixpanelTracking.js",
+		"outputAbbreviatedPath": "\/_assets\/js\/min\/mixpanelTracking-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
