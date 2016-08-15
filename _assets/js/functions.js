@@ -140,9 +140,6 @@ var showing = false;
 function showScrubber() {
   if (!(showing)) {
     showing = true;
-    
-    // Touch event hack
-    //$(".ui-slider-handle").draggable();
 
     var tl = new TimelineMax();
 

@@ -93,7 +93,7 @@
 	"\/_assets\/jade\/includes\/testController.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.html",
@@ -7306,15 +7306,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/public_html\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public_html\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/public_html\/js\/app-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -7376,17 +7367,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public_html\/js\/jquery.mobile-1.4.5.js",
 		"outputAbbreviatedPath": "\/public_html\/js\/min\/jquery.mobile-1.4.5-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/public_html\/js\/jquery.ui.touch-punch.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public_html\/js\/jquery.ui.touch-punch.min.js",
-		"outputAbbreviatedPath": "\/public_html\/js\/min\/jquery.ui.touch-punch.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
