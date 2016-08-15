@@ -177,11 +177,15 @@ function killPulse() {
 
 // Detect first scroll
 var haveScrolled = false;
+var loadTime = new Date().getTime();
+var triggerTime;
 
 document.onscroll = function(){
   if (!(haveScrolled)) {
     haveScrolled = true;
-    mixpanel.track("First scroll");
+    triggerTime = Math.floor((new Date().getTime() - loadTime)/1000);
+    console.log(triggerTime)
+    mixpanel.track("First scroll", { "Time passed" : triggerTime });
     killScrollGlow();
   }
 };
