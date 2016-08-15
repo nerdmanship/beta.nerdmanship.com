@@ -222,6 +222,8 @@ header .columns { padding: 0; }
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		@include breakpoint(medium) { opacity: 1 }
+		opacity: 0.5;
 	}
 	.glowContainer {
 		min-width: 450px;
