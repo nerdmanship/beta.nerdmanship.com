@@ -235,4 +235,4 @@ function updateSlider() {
   TweenMax.set(sliderHandle, {left: tl.progress()*100 + "%"});
 }
 
-$(".ui-slider-handle").draggable();
+//$(".ui-slider-handle").draggable();
