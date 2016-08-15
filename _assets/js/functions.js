@@ -58,7 +58,7 @@ makeBg(30, 1, 6); // Side, gutter, rows
 
 var bgSVG = select("#bgSVG");
 var bgRects = selectAll(".rectangle");
-var bgTl = new TimelineMax();
+var tlBg = new TimelineMax( { onComplete: showScrubber } );
 
 function makeBgTls(parentTL) {
   
@@ -71,7 +71,7 @@ function makeBgTls(parentTL) {
   }, parentTL);
 }
 
-makeBgTls(bgTl);
+makeBgTls(tlBg);
 
 
 
@@ -141,13 +141,15 @@ var showing = false;
 
 function showScrubber() {
   if (!(showing)) {
+    showing = true;
+
     var tl = new TimelineMax();
 
     tl
-    .to("#scrubbSVG", 1.5, {autoAlpha:1})
-    .to(".circle1", 0.5, {scale: 1, delay: 1.3, ease: Power3.easeOut})
+      .to("#scrubbSVG", 1.5, {autoAlpha:1})
+      .to(".circle1", 0.5, {scale: 1, delay: 1.6, ease: Power3.easeOut})
     ;
-    showing = true;
+    
     setTimeout(startPulse, 2000);
   }  
 }
@@ -175,12 +177,12 @@ function killPulse() {
 	tlPulse.kill();
 };
 
+// Detect first scroll
 var haveScrolled = false;
 
 document.onscroll = function(){
   if (!(haveScrolled)) {
-    haveScrolled = true;  
-    console.log("User scrolled");
+    haveScrolled = true;
     mixpanel.track("First scroll");
     killScrollGlow();
   }

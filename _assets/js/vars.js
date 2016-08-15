@@ -111,7 +111,7 @@ var
   backDur = 0.1,
   punchDur = 0.1,
   finDur = 0.25,
-  flicDur = 11,
+  flicDur = 14,
   backDelay = "=+0.25",
   punchDelay = "=+0.5",
   arcObj = {type:"soft", values:[{x:"+=0", y:"+=0"}, {x:"+=0", y:"+=100"}, {x:"+=180", y:"+=100"}]},
@@ -120,7 +120,6 @@ var
 
   logoStart = "hsla(200, 40%, 5%, 1)",
   backgroundTint = "hsla(200, 45%, 15%, 1)",
-  logoMid = "hsla(150, 20%, 60%, 1)",
   logoEnd = "hsla(150, 20%, 80%, 1)",
   yellow = "hsla(40, 90%, 65%, 1)",
 
