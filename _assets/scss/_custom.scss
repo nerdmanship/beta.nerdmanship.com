@@ -244,7 +244,7 @@ header .columns { padding: 0; }
 	.controllerContainer {
   		visibility: visible;
 		position: absolute;
-		@include breakpoint(medium) { top: 51%;	}
+		@include breakpoint(medium) { top: 51%; }
 		top: 90%;
 		left: 50%;
 		transform: translate(-50%);
