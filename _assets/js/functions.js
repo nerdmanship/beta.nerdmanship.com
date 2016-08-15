@@ -191,7 +191,7 @@ function scrollGlow() {
   if (!(haveScrolled)) {
     setTimeout(function() {
       tlScroll
-        .to(glowDiv, 1.2, { width: "50%", autoAlpha: 0.5 })
+        .to(glowDiv, 1.2, { autoAlpha: 0.5 })
         .to(glowDiv, 1.2, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
     }, 5000);
   }
