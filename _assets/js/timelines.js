@@ -462,8 +462,7 @@ tl_P
 // SCROLL INDICATION
 //––––––––––––––––––––
 
-tlScroll
-  .to(h1Shadow, 1, { textShadow: "2px -30px 250px hsla(40, 90%, 65%, 1)", repeat: -1, yoyo: true, ease: Power2.easeIn });
+
 
 
 

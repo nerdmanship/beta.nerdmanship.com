@@ -177,7 +177,7 @@ function killPulse() {
 
 // Glowing H1 for scroll indication
 function scrollIndication() {
-  tlScroll.play();
+  TweenMax.fromTo(".glowDiv", 1.2, { width: "50%", autoAlpha: 0.5 }, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
   console.log("scroll indicator triggered")
 }
 

@@ -89,7 +89,20 @@ strong { color: $yellow; }
 
 
 // Presentation
-#presentation h1 { text-shadow: 0px -10px 150px $yellow; }
+#presentation h1 { text-shadow: 0px -35px 150px hsla(40, 90%, 65%, 0); }
+#presentation .glowDiv {
+	position: absolute;
+	width: 50%;
+	transform: translateX(-50%);
+	border-radius: 10em;
+	background-color: $transparent;
+	left: 50%;
+
+	top: 11em;
+	height: 4em;
+	box-shadow: 0px -8em 150px $yellow;
+	opacity: 0;	
+}
 
 // Form
 #mce-EMAIL{
@@ -103,7 +116,7 @@ strong { color: $yellow; }
 .button { background-color: $interactive; }
 .micro { color: desaturate(lighten($background, 25), 20); }
 
-// Footer
+// Footer layout
 .socialIcon {
 	fill: $offWhite;
 	circle { fill: black; opacity: 0.01; }
@@ -167,6 +180,7 @@ section {
 
 #presentation,
 #disclaimer {
+	position: relative;
 	padding: 4em 0;
 }
 
