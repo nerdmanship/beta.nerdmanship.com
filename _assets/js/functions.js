@@ -234,5 +234,3 @@ function updateSlider() {
   TweenMax.set(scrubbProgress, {drawSVG: tl.progress()*100 + "%"});
   TweenMax.set(sliderHandle, {left: tl.progress()*100 + "%"});
 }
-
-//$(".ui-slider-handle").draggable();
