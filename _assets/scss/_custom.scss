@@ -91,23 +91,10 @@ strong { color: $yellow; }
 // Presentation
 #presentation h1 { text-shadow: 0px -35px 150px hsla(40, 90%, 65%, 0); }
 #presentation .glowDiv {
-	position: absolute;
-	transform: translateX(-50%);
 	border-radius: 10em;
 	background-color: $transparent;
-	left: 50%;
-
-	@include breakpoint(medium) {
-		top: 11em;
-		width: 50%;
-		height: 4em;
-		box-shadow: 0px -8em 150px $interactive;
-	}
-	top: 11em;
-	width: 90%;
-	height: 2em;
+	@include breakpoint(medium) { box-shadow: 0px -8em 150px $interactive; }
 	box-shadow: 0px -8em 50px $interactive;
-
 	opacity: 0;	
 }
 
@@ -281,7 +268,7 @@ header .columns { padding: 0; }
 		@include breakpoint(medium) {
     		visibility: visible;
   		}
-  		visibility: hidden;
+  		visibility: visible; // Change this to hide scrubber on mobile
 		position: absolute;
 		top: 51%;
 		left: 50%;
@@ -392,6 +379,20 @@ header .columns { padding: 0; }
 }
 
 
+// Main content
+
+#presentation .glowDiv {
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	top: 11em;
+	@include breakpoint(medium) {
+		width: 50%;
+		height: 4em;
+	}
+	width: 90%;
+	height: 2em;
+}
 
 // Form
 

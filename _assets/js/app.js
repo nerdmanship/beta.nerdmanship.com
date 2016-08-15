@@ -3,5 +3,3 @@
 // @codekit-append "settings.js"
 // @codekit-append "timelines.js"
 // @codekit-append "mainTl.js"
-
-$("#sliderHandle").draggable();
