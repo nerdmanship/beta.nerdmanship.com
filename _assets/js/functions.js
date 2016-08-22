@@ -82,6 +82,7 @@ function center() {
     TweenMax.set(bgSVG, { x: "-50%", y: "-50%" });
     TweenMax.set(nerdmanship, { x: "-50%", y: "-50%" });
     TweenMax.set(".controllerContainer", { x: "-50%", y: "-50%" });
+    console.log(window.innerWidth);
 };
 
 
@@ -146,7 +147,7 @@ function showScrubber() {
 
     tl
       .to("#scrubbSVG", 1.5, {autoAlpha:1})
-      .to(".circle1", 0.5, {scale: 1, delay: 1.6, ease: Power3.easeOut})
+      .to(".circle1", 0.5, {scale: 1, delay: 1.3, ease: Power3.easeOut})
     ;
     
     setTimeout(startPulse, 2000);
@@ -182,29 +183,10 @@ var haveScrolled = false;
 document.onscroll = function(){
   if (!(haveScrolled)) {
     haveScrolled = true;
-    killScrollGlow();
     trackFirstScroll();
   }
 };
 
-// Fade in and repeat scroll indicator glow
-function scrollGlow() {
-  if (!(haveScrolled)) {
-    setTimeout(function() {
-      tlScroll
-        .to(glowDiv, 1.2, { autoAlpha: 0.5 })
-        .to(glowDiv, 1.2, { width: "70%", autoAlpha: 1, repeat: -1, yoyo: true, ease: Power1.easeIn });
-    }, 5000);
-  }
-}
-
-// Fade out and remove scroll indicator glow
-function killScrollGlow() {
-  TweenMax.to(glowDiv, 0.5, { autoAlpha: 0 });
-  setTimeout(function() {
-    tlScroll.kill();
-  }, 600);
-}
 
 
 

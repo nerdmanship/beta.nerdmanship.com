@@ -6,7 +6,7 @@ var selectAll = function(s) { return document.querySelectorAll(s); };
 
 var 
   // TIMELINES
-  tl = new TimelineMax({onUpdate:updateSlider, onComplete: scrollGlow}),
+  tl = new TimelineMax({onUpdate:updateSlider}),
   
   tlStart = new TimelineMax(),
   tlAnimIn = new TimelineMax(),
@@ -16,7 +16,7 @@ var
   tlText = new TimelineMax(),
   tlScrubber = new TimelineMax(),
   tlGlow = new TimelineMax(),
-  tlScroll = new TimelineMax(),
+  tlHeadline = new TimelineMax(),
 
   tl_N = new TimelineMax(),
   tl_E = new TimelineMax(),
@@ -48,7 +48,7 @@ var
   chars = selectAll(".chars"),
   charGroup = select("#charGroup"),
 
-  glowDiv = select(".glowDiv"),
+  firstHeadline = select("#presentation h1"),
   
   theN = select("#n"),
   theE = select("#e"),

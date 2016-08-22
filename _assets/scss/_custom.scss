@@ -107,6 +107,8 @@ strong { color: $yellow; }
 	&:focus { box-shadow: 0 0 5px $interactive; }
 }
 
+input:focus { outline-color: $interactive; outline-offset: 0px;}
+
 .button { background-color: $interactive; }
 .micro { color: desaturate(lighten($background, 25), 20); }
 
@@ -170,10 +172,10 @@ header .columns { padding: 0; }
 	position: relative;
 	width: 100%;
 	@include breakpoint(medium) {
-		height: 95vh;
+		height: 85vh;
 		min-height: 34em;
 	}
-	height: 80vh;
+	height: 75vh;
 	min-height: 22em;
 	margin: 0;
 	padding: 0;
@@ -356,20 +358,6 @@ header .columns { padding: 0; }
 
 // Main content
 
-#presentation .glowDiv {
-	position: absolute;
-	transform: translateX(-50%);
-	left: 50%;
-	@include breakpoint(medium) {
-		top: 11em;
-		width: 50%;
-		height: 4em;
-	}
-	top: 10.5em;
-	width: 90%;
-	height: 2em;
-}
-
 #presentation,
 #disclaimer {
 	.container {
@@ -438,3 +426,8 @@ footer {
 
 
 
+//-----------------------
+// ANIMATION SETTINGS
+//-----------------------
+
+#presentation h1 { opacity:0; }

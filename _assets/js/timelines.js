@@ -108,11 +108,16 @@ tlText
 
 
 tlGlow
-  .to("#glowWide", 4, { autoAlpha: 0.25 }, 0)
-  .to("#glowSlim", 3, { autoAlpha: 0.05, ease: Back.easeOut }, 2)
-  .to("#glowSlim", 3, { attr:{ cy: 390, rx: 650, ry:20}, ease: Back.easeOut }, 2)
+  .to("#glowWide", 3, { autoAlpha: 0.25 }, 0)
+  .to("#glowSlim", 2, { autoAlpha: 0.05 }, 2)
+  .to("#glowSlim", 2, { attr:{ cy: 390, rx: 650, ry:20} }, 2)
   ;
 
+
+tlHeadline
+  .to(firstHeadline, 1, { autoAlpha: 1, ease: Power2.easeIn }, 0)
+  .from(firstHeadline, 1, { y: "+=30", ease: Power2.easeOut }, 0)
+  ;
 
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -129,7 +134,7 @@ tl_N
   .to(unit_N1, 0.20, { rotation: "-=20", ease: SlowMo.ease.config( 0.1, 0.1, true ) }, "arc")
   .to(unit_N1, 0.20, { rotation: "+=15", ease: SlowMo.ease.config( 0.1, 0.1, true ) }, "arc =+0.2")
   .to(unit_N1, 0.15, { rotation: "+=20", ease: SlowMo.ease.config( 0.1, 0.1, true ) }, "back")
-  .to(unit_N1, 0.20, { rotation: "-=15", ease: SlowMo.ease.config( 0.1, 0.1, true ) }, "back =+0.15")
+  .to(unit_N1, 0.20, { rotation: "-=55", ease: SlowMo.ease.config( 0.1, 0.1, true ) }, "back =+0.15")
 
   // 0.45s
   .add( "prepAnim", "arc" )

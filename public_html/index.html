@@ -1866,7 +1866,6 @@
     <section id="presentation">
       <div class="row">
         <div class="columns small-12 small-centered">
-          <div class="glowDiv"></div>
           <div class="container text-center">
             <div class="headlineGroup">
               <h1>Motion graphics<br/> for browsers</h1>
@@ -1966,7 +1965,15 @@
         </div>
       </div>
     </footer>
-    <!--include includes/testController.jade-->
+    <div class="controls row">
+      <div class="buttons small-4 columns">
+        <button id="btnPause" class="button"><i class="fa fa-pause fa-2x"></i></button>
+        <button id="btnPlay" class="button"><i class="fa fa-play fa-2x"></i></button>
+      </div>
+      <div class="scrubb small-8 columns">
+        <div id="productionSlider"></div>
+      </div>
+    </div>
     <script src="js/tracking.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

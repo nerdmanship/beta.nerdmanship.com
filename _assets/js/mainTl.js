@@ -27,6 +27,7 @@ tl
   
   .add(tlFinish, "finish")
   .add(tlText, "finish")
-  .add(tlBg, "finish") // 4s
-  .add(tlGlow, "finish =+3")
+  .add(tlBg, "finish") // 5s
+  .add(tlGlow, 9.5)
+  .add(tlHeadline, 12.5)
 ;
