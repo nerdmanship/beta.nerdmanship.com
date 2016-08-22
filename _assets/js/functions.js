@@ -107,7 +107,7 @@ $("#discoverySlider").slider({
   step: 0.01,
   slide: function ( event, ui ) {
     tl.progress( ui.value/100 ).pause();
-    tlHeadline.reverse();
+    hideHeadline();
     TweenMax.set(scrubbProgress, {drawSVG: ui.value + "%"});
     TweenMax.to(".controllerContainer", 0.2, {autoAlpha: 0.2});
   },
@@ -199,8 +199,10 @@ function showHeadline() {
 }
 
 function hideHeadline() {
-  tlHeadline.reverse().timeScale(2);
-  headlineShowing = false;
+  if ( window.pageYOffset<5 ){
+    tlHeadline.reverse().timeScale(2);
+    headlineShowing = false;
+  }
 }
 
 document.onscroll = function(){
