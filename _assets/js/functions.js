@@ -107,6 +107,7 @@ $("#discoverySlider").slider({
   step: 0.01,
   slide: function ( event, ui ) {
     tl.progress( ui.value/100 ).pause();
+    tlHeadline.reverse();
     TweenMax.set(scrubbProgress, {drawSVG: ui.value + "%"});
     TweenMax.to(".controllerContainer", 0.2, {autoAlpha: 0.2});
   },
@@ -189,6 +190,40 @@ document.onscroll = function(){
 
 
 
+// Show/hide first headline during timeline is playing
+var headlineShowing = false;
+
+function showHeadline() {
+  tlHeadline.play().timeScale(2);
+  headlineShowing = true;
+}
+
+function hideHeadline() {
+  tlHeadline.reverse().timeScale(2);
+  headlineShowing = false;
+}
+
+document.onscroll = function(){
+  if( tl.isActive() && window.pageYOffset>20 && (!(headlineShowing)) ) {
+      showHeadline();
+  } else if( tl.isActive() && window.pageYOffset<5 && headlineShowing ) {
+    hideHeadline();
+  }
+}
+
+/* window.addEventListener("load", doesFooterFit);
+ window.addEventListener("resize", doesFooterFit);
+
+function doesFooterFit() {
+  console.log(footerContent.clientHeight);
+  console.log(window.innerHeight);
+  if (window.innerHeight*0.8 > footerContent.clientHeight) {
+    console.log("Adding class .uncoverFooter");
+    footer.className += "uncoverFooter";
+  } else {
+    console.log("Removing class .uncoverFooter");
+  }
+}*/
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // PRODUCTION TOOLS

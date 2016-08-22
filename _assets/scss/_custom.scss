@@ -38,8 +38,10 @@ h2 {
 .logoText {
 	font: 1.3em $logoFont;
 	@include breakpoint(medium) { font-size: 1.5em ; }
+	@include breakpoint(large) { font-size: 2em ; }
 	text-transform: uppercase;
 	letter-spacing: 0.0625em;
+	text-align: center;
 }
 
 .button { font: 1em $headlineFont; text-transform: uppercase; }
@@ -89,14 +91,7 @@ strong { color: $yellow; }
 
 
 // Presentation
-#presentation h1 { text-shadow: 0px -35px 150px hsla(40, 90%, 65%, 0); }
-#presentation .glowDiv {
-	border-radius: 10em;
-	background-color: $transparent;
-	@include breakpoint(medium) { box-shadow: 0px -8em 150px $interactive; }
-	box-shadow: 0px -8em 50px $interactive;
-	opacity: 0;	
-}
+#presentation h1 { opacity:0; text-shadow: 0px -35px 150px hsla(40, 90%, 65%, 0); }
 
 // Form
 #mce-EMAIL{
@@ -157,10 +152,6 @@ p {
 	margin-bottom: 2em;
 }
 
-section {
-	padding-bottom: 8em;
-}
-
 
 
 // Header
@@ -168,20 +159,25 @@ section {
 header .row { max-width: none; }
 header .columns { padding: 0; }
 
-.kineticType {
+header {
 	position: relative;
 	width: 100%;
 	@include breakpoint(medium) {
-		height: 85vh;
-		min-height: 34em;
+		height: 98vh;
 	}
-	height: 82vh;
-	min-height: 21em;
-	margin: 0;
-	padding: 0;
+	height: 75vh;
 	overflow: hidden;
-	.headerBackground,
-	.glowContainer {
+
+}
+
+#bgContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1280;
+
+	.headerBackground {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -191,12 +187,7 @@ header .columns { padding: 0; }
 		@include breakpoint(medium) { opacity: 1 }
 		opacity: 0.5;
 	}
-	.glowContainer {
-		min-width: 450px;
-		max-width: 1280px;
-	}
-	#glowWide,
-	#glowSlim { opacity: 0; }
+
  	#bgSVG {
 		position: absolute;
 		min-width: 45em;
@@ -207,103 +198,169 @@ header .columns { padding: 0; }
 		overflow: visible;
 	}
 
-	#nerdmanship {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		min-height: 400px;
-		min-width: 450px;
-		max-width: 1280px;
-		left: 50%;
-		top: 40%;
-		transform: translate(-50%, -50%);
-		margin: 0;
-		overflow: visible;
-		opacity: 0;
-		.box { visibility: hidden; }
-	}
-
-	.logoText {
-		opacity: 0;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.logoUpper { top: 25%; }
-	.logoLower { 
-		@include breakpoint(medium) { top: 55%;	}
-  		top: 50%;
-  		min-width: 195px;
-  	}
-
 	.gradient {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 	}
+}
 
-	.controllerContainer {
-  		visibility: visible;
-		position: absolute;
-		@include breakpoint(medium) { top: 51%; }
-		top: 90%;
-		left: 50%;
-		transform: translate(-50%);
-		width: $scrubbW;
-		min-width: 250px;
-		height: 0.25em;
+#contentContainer {
+	position: absolute;
+	width: 100%;
+	min-width: 450px;
+	@include breakpoint(medium) { width: 900px; } // scrub width & position, text font size & position
+	@include breakpoint(large) { width: 1280px; }
+	@include breakpoint(xlarge) { width: 1600px; }
+	@include breakpoint(xxlarge) { width: 1700px; }
+	height: 300px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: visible;
+
+	// Content positioning
+	.logoUpper { top: 10%; 
+		@include breakpoint(xlarge) { top: 5%; }
+	}
 	
-		.sliderContainer {
+	#nerdmanship { top: 32%;
+		@include breakpoint(medium) { top: 40%; }
+		@include breakpoint(large) { top: 45%; }
+		@include breakpoint(xlarge) { top: 45%; }
+	}
+	
+	.glowContainer { top: 32%;
+		@include breakpoint(medium) { top: 40%; }
+		@include breakpoint(large) { top: 45%; }
+		@include breakpoint(xlarge) { top: 45%; }
+	}
+	
+	.logoLower { top: 45%;
+		@include breakpoint(medium) { top: 70%; }
+		@include breakpoint(large) { top: 80%; }
+		@include breakpoint(xlarge) { top: 85%; }
+	}
+	
+	.controllerContainer { top: 90%;
+		@include breakpoint(medium) { top: 60%; }
+		@include breakpoint(large) { top: 70%; }
+		@include breakpoint(xlarge) { top: 74%; }
+	}
+
+	.kineticType {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		.glowContainer {
+			position: absolute;
+			height: 100%;
+			width: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include breakpoint(medium) { opacity: 1 }
+			opacity: 0.5;
+			overflow: visible;
+			#glowWide, #glowSlim { opacity: 0; }
+			.glow {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				overflow: visible;
+			}
+		}
+
+		
+
+		#nerdmanship {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			border-radius: 10px;
-			overflow: hidden;
-			#scrubbSVG {
-				visibility: hidden;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0;
+			overflow: visible;
+			opacity: 0;
+			.box { visibility: hidden; } // Helper bounding box
+		}
+
+		.logoText {
+			opacity: 0;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+
+
+		.controllerContainer {
+	  		visibility: visible;
+	  		overflow: visible;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+			width: $scrubbW;
+			min-width: 250px;
+			height: 0.25em;
+		
+			.sliderContainer {
 				position: absolute;
 				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				overflow: hidden;
+				#scrubbSVG {
+					visibility: hidden;
+					position: absolute;
+					width: 100%;
+				}
 			}
-		}
-		#sliderHandle {
-			position: absolute;
-			z-index: $sliderHandleIndex;
-			height: 10px;
-			top: 50%;
-			overflow: visible;
-			.circle1,		
-			.circle2,
-			.circle3,
-			.circle4 { visibility: hidden; }
-		}
-		#discoverySlider {
-			position: absolute;
-			top:0;
-			width: 100%;
-			height: 100%;
-			border-radius: 10px;
-			border: none;
-			cursor: pointer;
-			.ui-slider-handle {
+			#sliderHandle {
 				position: absolute;
-			    z-index: $ui-slider-handleIndex;
-			    width: 20px;
-			    height: 20px;
-				background: transparent;
-				cursor: pointer;
-			    touch-action: none;
-			    border: none;
-			    border-radius: 20px;
-			    margin-left: -10px;
-			    top: -200%;
+				z-index: $sliderHandleIndex;
+				height: 50px;
+				top: -23px;
+				overflow: visible;
+				.circle1,		
+				.circle2,
+				.circle3,
+				.circle4 { visibility: hidden;}
 			}
-			.ui-state-focus {
-				outline: none;
+			#discoverySlider {
+				position: absolute;
+				top:0;
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				border: none;
+				cursor: pointer;
+				.ui-slider-handle {
+					position: absolute;
+				    z-index: $ui-slider-handleIndex;
+				    width: 20px;
+				    height: 20px;
+					background: transparent;
+					cursor: pointer;
+				    touch-action: none;
+				    border: none;
+				    border-radius: 20px;
+				    margin-left: -10px;
+				    top: -200%;
+				}
+				.ui-state-focus {
+					outline: none;
+				}
 			}
 		}
 	}
 }
+
+
 
 
 
@@ -372,8 +429,11 @@ header .columns { padding: 0; }
 .button { padding: 0.5em 1em }
 
 #presentation,
-#disclaimer {
+#disclaimer  {
 	position: relative;
+}
+
+#disclaimer {
 	padding: 4em 0;
 }
 
@@ -403,7 +463,7 @@ header .columns { padding: 0; }
 footer {
 
 	// Footer uncover style on all devices but small
-	@include breakpoint(medium) { position: fixed; z-index: $footerIndex; padding-top: 5em; }
+	@include breakpoint(medium) { position: fixed; z-index: $footerIndex; height: 80vh; }
 	
 	position: relative;
 	width: 100%;
@@ -420,14 +480,3 @@ footer {
 	width: 50px;
 	margin: 0 1em;
 }
-
-
-
-
-
-
-//-----------------------
-// ANIMATION SETTINGS
-//-----------------------
-
-#presentation h1 { opacity:0; }

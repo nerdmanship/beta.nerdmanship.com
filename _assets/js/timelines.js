@@ -110,7 +110,6 @@ tlText
 tlGlow
   .to("#glowWide", 3, { autoAlpha: 0.25 }, 0)
   .to("#glowSlim", 2, { autoAlpha: 0.05 }, 2)
-  .to("#glowSlim", 2, { attr:{ cy: 390, rx: 650, ry:20} }, 2)
   ;
 
 

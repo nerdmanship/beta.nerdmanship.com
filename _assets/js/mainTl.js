@@ -29,5 +29,4 @@ tl
   .add(tlText, "finish")
   .add(tlBg, "finish") // 5s
   .add(tlGlow, 9.5)
-  .add(tlHeadline, 12.5)
 ;
