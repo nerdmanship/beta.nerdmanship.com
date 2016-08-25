@@ -224,7 +224,7 @@ var heightDiff;
 var isFixed = false;
 
 function changeFooterStyle() {
-  heightAvailable = (window.innerHeight*0.8);
+  heightAvailable = (window.innerHeight*0.95);
   heightDiff = (heightAvailable - heightNeeded);
   
   // Check if footer fits

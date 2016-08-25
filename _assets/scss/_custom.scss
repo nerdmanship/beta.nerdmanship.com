@@ -471,7 +471,8 @@ footer {
 
 	.fixedFooter-C { 
 		top: 50%;
-		transform: translate(-50%, -35%);
+		transform: translate(-50%, -50%);
+		padding: 0;
 	}
 
 	.footerContent > div { padding: 1.2em 0; }
@@ -494,7 +495,7 @@ footer {
 }
 
 .fixedFooter-B {
-	margin-bottom: 80vh;
+	margin-bottom: 95vh;
 }
 
 
