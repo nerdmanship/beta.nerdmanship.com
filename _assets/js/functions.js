@@ -215,7 +215,7 @@ document.onscroll = function(){
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // FIXED FOOTER SCRIPT
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
-
+/*
 window.addEventListener("load", changeFooterStyle);
 // window.addEventListener("resize", changeFooterStyle);
 var heightNeeded = footerContent.clientHeight;
@@ -250,7 +250,7 @@ function changeFooterStyle() {
     isFixed = false;
 
   }
-}
+}*/
 
 
 
