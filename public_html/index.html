@@ -14,8 +14,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerdmanship beta</title>
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css"><link href="https://fonts.googleapis.com/css?family=Geo|Open+Sans:400,700|Rubik+One" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -1955,21 +1955,15 @@
         </div>
       </div>
     </footer>
-    <div class="controls row">
-      <div class="buttons small-4 columns">
-        <button id="btnPause" class="button"><i class="fa fa-pause fa-2x"></i></button>
-        <button id="btnPlay" class="button"><i class="fa fa-play fa-2x"></i></button>
-      </div>
-      <div class="scrubb small-8 columns">
-        <div id="productionSlider"></div>
-      </div>
-    </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/foundation.js"></script>
-    <script src="js/TweenMax.js"></script>
+    <!--include includes/testController.jade-->
+    <script src="js/tracking.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/DrawSVGPlugin.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/app-min.js"></script>
   </body>
 </html>
