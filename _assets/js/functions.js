@@ -217,7 +217,7 @@ document.onscroll = function(){
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 window.addEventListener("load", changeFooterStyle);
-window.addEventListener("resize", changeFooterStyle);
+// window.addEventListener("resize", changeFooterStyle);
 var heightNeeded = footerContent.clientHeight;
 var heightAvailable;
 var heightDiff;
