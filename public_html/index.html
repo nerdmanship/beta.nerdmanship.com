@@ -14,8 +14,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerdmanship beta</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css"><link href="https://fonts.googleapis.com/css?family=Geo|Open+Sans:400,700|Rubik+One" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -1921,59 +1921,47 @@
       </div>
     </section>
     <footer>
-      <div class="row">
-        <div class="columns small-12 text-center footerContent">
-          <div class="row">
-            <div class="columns company headline">
-              <h1>the Nerdmanship<br />Animation Studio</h1>
-              <h2>Motion Graphics for Browsers</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="columns socialLinks">
-              <svg id="socialCodepen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.codepen.io/stromqvist">
-                  <title>Codepen</title>
-                  <g id="socialCodepen" fill-rule="evenodd" class="socialIcon">
-                    <circle cx="50" cy="50" r="50"></circle>
-                    <path d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50zm1.895-82.5c-1.8-1.19-4.148-1.164-5.92.072L19.447 36.048c-1.415.986-2.258 2.6-2.258 4.325V60.28c0 1.77.888 3.422 2.365 4.398L46.515 82.5c1.763 1.166 4.052 1.166 5.814 0l27.495-18.166c1.476-.976 2.365-2.627 2.365-4.397v-19.56c0-1.768-.887-3.42-2.363-4.395L51.895 17.5z"></path>
-                    <path d="M75.242 54.414l-6.678-4.39 6.678-4.478v8.868zM52.898 73.992v-13.46l9.408-6.303 10.13 6.657-19.538 13.105zM42.215 49.665l6.368-4.454L56 50.087l-6.573 4.417-7.212-4.838zM45.95 73.992l-19.668-13.19 9.825-6.87 9.844 6.606v13.454zM23.607 45.55l6.304 4.225-6.303 4.41V45.55zM45.784 25.337v13.34l-9.766 6.83-9.74-6.53 19.506-13.64zM72.433 39.064L62.27 45.887l-9.53-6.93-.06-13.632 19.753 13.74z"></path>
-                  </g></a></svg>
-              <svg id="socialFacebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.facebook.com/theNerdmanship">
-                  <title>Facebook</title>
-                  <g id="Facebook" class="socialIcon">
-                    <circle cx="50" cy="50" r="50"></circle>
-                    <path d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50zm12.57-48.043h-8.922v32.686H40.13V51.957h-6.428V40.47h6.43v-7.433c0-5.316 2.524-13.64 13.636-13.64l10.013.042v11.15h-7.264c-1.19 0-2.867.595-2.867 3.13v6.76h10.1l-1.18 11.477z"></path>
-                  </g></a></svg>
-              <svg id="socialGithub" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.github.com/stromqvist">
-                  <title>Github</title>
-                  <g id="Github" class="socialIcon">
-                    <circle cx="50" cy="50" r="50"></circle>
-                    <path d="M93.293 24.902c-4.47-7.66-10.536-13.726-18.196-18.196C67.437 2.236 59.072 0 50 0c-9.072 0-17.438 2.236-25.098 6.706-7.66 4.47-13.725 10.536-18.196 18.196C2.236 32.562 0 40.928 0 49.998 0 60.893 3.18 70.69 9.538 79.392c6.358 8.703 14.572 14.724 24.64 18.066 1.173.218 2.04.064 2.605-.455.564-.52.846-1.172.846-1.953 0-.13-.012-1.3-.034-3.515-.022-2.214-.033-4.145-.033-5.793l-1.497.26c-.955.174-2.16.248-3.614.227-1.453-.02-2.962-.174-4.524-.457-1.563-.28-3.017-.932-4.362-1.952-1.345-1.02-2.3-2.354-2.864-4.002l-.65-1.498c-.435-.997-1.118-2.105-2.052-3.32-.933-1.215-1.877-2.04-2.83-2.474l-.457-.326c-.304-.217-.586-.478-.846-.782-.26-.303-.456-.607-.586-.91-.13-.306-.02-.555.326-.75.348-.197.977-.292 1.888-.292l1.302.194c.868.174 1.942.694 3.223 1.563 1.28.867 2.33 1.996 3.156 3.384 1 1.78 2.202 3.136 3.613 4.07 1.41.933 2.83 1.4 4.263 1.4 1.432 0 2.67-.11 3.71-.326 1.042-.216 2.02-.542 2.93-.976.39-2.91 1.455-5.144 3.19-6.706-2.474-.26-4.698-.652-6.673-1.172-1.974-.52-4.014-1.367-6.12-2.54-2.105-1.172-3.852-2.626-5.24-4.362-1.39-1.736-2.53-4.015-3.418-6.836-.89-2.82-1.334-6.076-1.334-9.765 0-5.253 1.715-9.722 5.144-13.412-1.607-3.948-1.455-8.375.455-13.28 1.26-.39 3.125-.097 5.6.88 2.473.976 4.284 1.813 5.435 2.506 1.15.694 2.073 1.28 2.767 1.758 4.036-1.128 8.203-1.692 12.5-1.692 4.296 0 8.463.564 12.5 1.692l2.474-1.562c1.692-1.042 3.69-1.997 5.988-2.865 2.3-.868 4.06-1.106 5.276-.715 1.952 4.904 2.126 9.33.52 13.28 3.428 3.69 5.143 8.16 5.143 13.412 0 3.69-.445 6.954-1.333 9.797-.89 2.845-2.04 5.122-3.45 6.837-1.41 1.715-3.17 3.158-5.274 4.33-2.105 1.17-4.146 2.017-6.12 2.54-1.975.52-4.2.912-6.673 1.172 2.256 1.95 3.385 5.033 3.385 9.243V95.05c0 .78.27 1.43.814 1.95.542.52 1.398.674 2.57.456 10.07-3.34 18.285-9.363 24.643-18.066C96.82 70.69 100 60.89 100 49.996c-.002-9.068-2.24-17.433-6.707-25.094z"></path>
-                  </g></a></svg>
-            </div>
-          </div>
-          <div class="row">
-            <div class="columns mailto"><a href="mailto:johan@nerdmanship.com" class="button">Contact</a>
-              <p><a href="mailto:johan@nerdmanship.com" class="micro">johan@nerdmanship.com</a></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="columns copyright">
-              <p>&copy; 2016 the Nerdmanship</p>
-            </div>
-          </div>
+      <div class="text-center footerContent">
+        <div class="company headline">
+          <h1>the Nerdmanship<br />Animation Studio</h1>
+          <h2>Motion Graphics for Browsers</h2>
+        </div>
+        <div class="socialLinks">
+          <svg id="socialCodepen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.codepen.io/stromqvist">
+              <title>Codepen</title>
+              <g id="socialCodepen" fill-rule="evenodd" class="socialIcon">
+                <circle cx="50" cy="50" r="50"></circle>
+                <path d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50zm1.895-82.5c-1.8-1.19-4.148-1.164-5.92.072L19.447 36.048c-1.415.986-2.258 2.6-2.258 4.325V60.28c0 1.77.888 3.422 2.365 4.398L46.515 82.5c1.763 1.166 4.052 1.166 5.814 0l27.495-18.166c1.476-.976 2.365-2.627 2.365-4.397v-19.56c0-1.768-.887-3.42-2.363-4.395L51.895 17.5z"></path>
+                <path d="M75.242 54.414l-6.678-4.39 6.678-4.478v8.868zM52.898 73.992v-13.46l9.408-6.303 10.13 6.657-19.538 13.105zM42.215 49.665l6.368-4.454L56 50.087l-6.573 4.417-7.212-4.838zM45.95 73.992l-19.668-13.19 9.825-6.87 9.844 6.606v13.454zM23.607 45.55l6.304 4.225-6.303 4.41V45.55zM45.784 25.337v13.34l-9.766 6.83-9.74-6.53 19.506-13.64zM72.433 39.064L62.27 45.887l-9.53-6.93-.06-13.632 19.753 13.74z"></path>
+              </g></a></svg>
+          <svg id="socialFacebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.facebook.com/theNerdmanship">
+              <title>Facebook</title>
+              <g id="Facebook" class="socialIcon">
+                <circle cx="50" cy="50" r="50"></circle>
+                <path d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50zm12.57-48.043h-8.922v32.686H40.13V51.957h-6.428V40.47h6.43v-7.433c0-5.316 2.524-13.64 13.636-13.64l10.013.042v11.15h-7.264c-1.19 0-2.867.595-2.867 3.13v6.76h10.1l-1.18 11.477z"></path>
+              </g></a></svg>
+          <svg id="socialGithub" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" class="socialLink"><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.github.com/stromqvist">
+              <title>Github</title>
+              <g id="Github" class="socialIcon">
+                <circle cx="50" cy="50" r="50"></circle>
+                <path d="M93.293 24.902c-4.47-7.66-10.536-13.726-18.196-18.196C67.437 2.236 59.072 0 50 0c-9.072 0-17.438 2.236-25.098 6.706-7.66 4.47-13.725 10.536-18.196 18.196C2.236 32.562 0 40.928 0 49.998 0 60.893 3.18 70.69 9.538 79.392c6.358 8.703 14.572 14.724 24.64 18.066 1.173.218 2.04.064 2.605-.455.564-.52.846-1.172.846-1.953 0-.13-.012-1.3-.034-3.515-.022-2.214-.033-4.145-.033-5.793l-1.497.26c-.955.174-2.16.248-3.614.227-1.453-.02-2.962-.174-4.524-.457-1.563-.28-3.017-.932-4.362-1.952-1.345-1.02-2.3-2.354-2.864-4.002l-.65-1.498c-.435-.997-1.118-2.105-2.052-3.32-.933-1.215-1.877-2.04-2.83-2.474l-.457-.326c-.304-.217-.586-.478-.846-.782-.26-.303-.456-.607-.586-.91-.13-.306-.02-.555.326-.75.348-.197.977-.292 1.888-.292l1.302.194c.868.174 1.942.694 3.223 1.563 1.28.867 2.33 1.996 3.156 3.384 1 1.78 2.202 3.136 3.613 4.07 1.41.933 2.83 1.4 4.263 1.4 1.432 0 2.67-.11 3.71-.326 1.042-.216 2.02-.542 2.93-.976.39-2.91 1.455-5.144 3.19-6.706-2.474-.26-4.698-.652-6.673-1.172-1.974-.52-4.014-1.367-6.12-2.54-2.105-1.172-3.852-2.626-5.24-4.362-1.39-1.736-2.53-4.015-3.418-6.836-.89-2.82-1.334-6.076-1.334-9.765 0-5.253 1.715-9.722 5.144-13.412-1.607-3.948-1.455-8.375.455-13.28 1.26-.39 3.125-.097 5.6.88 2.473.976 4.284 1.813 5.435 2.506 1.15.694 2.073 1.28 2.767 1.758 4.036-1.128 8.203-1.692 12.5-1.692 4.296 0 8.463.564 12.5 1.692l2.474-1.562c1.692-1.042 3.69-1.997 5.988-2.865 2.3-.868 4.06-1.106 5.276-.715 1.952 4.904 2.126 9.33.52 13.28 3.428 3.69 5.143 8.16 5.143 13.412 0 3.69-.445 6.954-1.333 9.797-.89 2.845-2.04 5.122-3.45 6.837-1.41 1.715-3.17 3.158-5.274 4.33-2.105 1.17-4.146 2.017-6.12 2.54-1.975.52-4.2.912-6.673 1.172 2.256 1.95 3.385 5.033 3.385 9.243V95.05c0 .78.27 1.43.814 1.95.542.52 1.398.674 2.57.456 10.07-3.34 18.285-9.363 24.643-18.066C96.82 70.69 100 60.89 100 49.996c-.002-9.068-2.24-17.433-6.707-25.094z"></path>
+              </g></a></svg>
+        </div>
+        <div class="mailto"><a href="mailto:johan@nerdmanship.com" class="button">Contact</a>
+          <p><a href="mailto:johan@nerdmanship.com" class="micro">johan@nerdmanship.com</a></p>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2016 the Nerdmanship</p>
         </div>
       </div>
     </footer>
     <!--include includes/testController.jade-->
-    <script src="js/tracking.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/foundation.js"></script>
+    <script src="js/TweenMax.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/DrawSVGPlugin.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/app-min.js"></script>
   </body>
 </html>

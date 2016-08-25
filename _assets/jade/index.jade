@@ -4,13 +4,13 @@ include includes/scripts_mixin.jade
 
 // Clean up scripts before deployment
 //- Online
-- styles = ["https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css", "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", "css/app.css"]
-- scripts = ["js/tracking.js", "https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js", "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/jquery.ui.touch-punch.min.js", "js/app-min.js"]
+	- styles = ["https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css", "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", "css/app.css"]
+	- scripts = ["js/tracking.js", "https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js", "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/jquery.ui.touch-punch.min.js", "js/app-min.js"]
 
 
 //- Offline
-	- styles = ["css/jquery-ui.css", "css/font-awesome.min.css", "css/app.css"]
-	- scripts = ["js/jquery.js", "js/jquery-ui.js", "js/foundation.js",  "js/TweenMax.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/app-min.js"]
+- styles = ["css/jquery-ui.css", "css/font-awesome.min.css", "css/app.css"]
+- scripts = ["js/jquery.js", "js/jquery-ui.js", "js/foundation.js",  "js/TweenMax.js", "js/SplitText.min.js", "js/DrawSVGPlugin.min.js", "js/app-min.js"]
 
 doctype
 html(class="no-js" lang="en")

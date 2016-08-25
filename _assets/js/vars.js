@@ -51,6 +51,7 @@ var
   firstHeadline = select("#presentation h1"),
   footerContent = select(".footerContent"),
   footer = select("footer"),
+  body = select("body"),
   
   theN = select("#n"),
   theE = select("#e"),

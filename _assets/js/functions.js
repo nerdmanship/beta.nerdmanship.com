@@ -82,7 +82,6 @@ function center() {
     TweenMax.set(bgSVG, { x: "-50%", y: "-50%" });
     TweenMax.set(nerdmanship, { x: "-50%", y: "-50%" });
     TweenMax.set(".controllerContainer", { x: "-50%", y: "-50%" });
-    console.log(window.innerWidth);
 };
 
 
@@ -200,7 +199,7 @@ function showHeadline() {
 
 function hideHeadline() {
   if ( window.pageYOffset<5 ){
-    tlHeadline.reverse().timeScale(2);
+    tlHeadline.reverse();
     headlineShowing = false;
   }
 }
@@ -213,19 +212,47 @@ document.onscroll = function(){
   }
 }
 
-/* window.addEventListener("load", doesFooterFit);
- window.addEventListener("resize", doesFooterFit);
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// FIXED FOOTER SCRIPT
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-function doesFooterFit() {
-  console.log(footerContent.clientHeight);
-  console.log(window.innerHeight);
-  if (window.innerHeight*0.8 > footerContent.clientHeight) {
-    console.log("Adding class .uncoverFooter");
-    footer.className += "uncoverFooter";
-  } else {
-    console.log("Removing class .uncoverFooter");
+window.addEventListener("load", changeFooterStyle);
+window.addEventListener("resize", changeFooterStyle);
+var heightNeeded = footerContent.clientHeight;
+var heightAvailable;
+var heightDiff;
+var isFixed = false;
+
+function changeFooterStyle() {
+  heightAvailable = (window.innerHeight*0.8);
+  heightDiff = (heightAvailable - heightNeeded);
+  
+  // Check if footer fits
+  if ( heightDiff >= 0 ) { footerFits = true; } else { footerFits = false; }
+
+  // Change css when conditions match
+  if ( footerFits && (!(isFixed)) ) {
+    
+    // Add classes
+    footer.classList.add("fixedFooter-F");
+    body.classList.add("fixedFooter-B");
+    footerContent.classList.add("fixedFooter-C");
+    // Set status to avoid css change when unnecessary
+    isFixed = true;
+
+  } else if (!(footerFits) && isFixed ) {
+    
+    // Remove classes
+    footer.classList.remove("fixedFooter-F");
+    body.classList.remove("fixedFooter-B");
+    footerContent.classList.remove("fixedFooter-C");
+    // Set status to avoid css change when unnecessary
+    isFixed = false;
+
   }
-}*/
+}
+
+
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 // PRODUCTION TOOLS

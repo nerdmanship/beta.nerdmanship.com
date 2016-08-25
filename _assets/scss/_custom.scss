@@ -141,9 +141,6 @@ $ui-slider-handleIndex: 3;
 
 body {
 	position: relative;
-	@include breakpoint(medium) {
-    	margin-bottom: 80vh;
-  	}
 	margin-bottom: 0;
 	height: auto;
 }
@@ -165,7 +162,7 @@ header {
 	@include breakpoint(medium) {
 		height: 98vh;
 	}
-	height: 75vh;
+	height: 85vh;
 	overflow: hidden;
 
 }
@@ -461,22 +458,45 @@ header {
 // Footer
 
 footer {
-
-	// Footer uncover style on all devices but small
-	@include breakpoint(medium) { position: fixed; z-index: $footerIndex; height: 80vh; }
-	
 	position: relative;
-	width: 100%;
-	bottom: 0;
+	width: 100vw;
 	
-	.row { padding: 1.2em 0; }
+	.footerContent {
+		position: relative;
+		padding: 2em 0;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 600px;
+	}
+
+	.fixedFooter-C { 
+		top: 50%;
+		transform: translate(-50%, -35%);
+	}
+
+	.footerContent > div { padding: 1.2em 0; }
 	
 	p { margin-bottom: 0; }
 	.button { margin-bottom: 0; min-width: 15em; }
 
+	.socialLink {
+		width: 50px;
+		margin: 0 1em;
+	}
+
 }
 
-.socialLink {
-	width: 50px;
-	margin: 0 1em;
+.fixedFooter-F {
+	position: fixed;
+	z-index: $footerIndex;
+	height: 100vh;
+	bottom: 0;
 }
+
+.fixedFooter-B {
+	margin-bottom: 80vh;
+}
+
+
+
+// Change js
