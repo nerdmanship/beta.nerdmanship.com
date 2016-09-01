@@ -62,3 +62,5 @@ TweenMax.set(unit_I10, { x: 225 });
 
 // Text settings
 TweenMax.set(logoText, { autoAlpha:1 });
+
+TweenMax.set(".notification", { transformOrigin: "bottom center", scale: 0, xPercent: 20, yPercent: -20 })

@@ -212,8 +212,35 @@ document.onscroll = function(){
   }
 }
 
+
+
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
-// FIXED FOOTER SCRIPT
+// SHOW FACEBOOK NOTIFICATION WHEN ENTER FOOTER
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+var notificationShowing = false;
+
+function facebookNotification() {
+  if (!(notificationShowing)) {
+    setTimeout(function(){
+      TweenMax.to(".notification", 0.3, { scale: 1, ease: Power3.easeOut })
+      TweenMax.to(".notification", 0.3, { y: "-=5", ease: SlowMo.ease.config( 0.1, 0.1, true ) })
+     }, 1000);
+    notificationShowing = true;
+  }
+}
+
+var controller = new ScrollMagic.Controller();
+var scene = new ScrollMagic.Scene({
+                  triggerElement: footer
+                })
+                .on("enter", facebookNotification)
+                .addTo(controller);
+
+
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––
+// FIXED FOOTER SCRIPT (temp disabled)
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 /*
 window.addEventListener("load", changeFooterStyle);

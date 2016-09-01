@@ -111,7 +111,8 @@ input:focus { outline-color: $interactive; outline-offset: 0px;}
 // Footer layout
 .socialIcon {
 	fill: $offWhite;
-	circle { fill: black; opacity: 0.01; }
+	.clickTarget { fill: black; opacity: 0.01; }
+	.notification circle { fill: $interactive; }
 }
 
 .copyright p { color: desaturate(lighten($background, 25), 20); }
@@ -484,6 +485,7 @@ footer {
 	.socialLink {
 		width: 50px;
 		margin: 0 1em;
+		overflow: visible;
 	}
 
 }
