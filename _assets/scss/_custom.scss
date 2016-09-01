@@ -32,8 +32,8 @@ h2 {
 }
 
 h2 {
-	font-size: 0.6em;
-	@include breakpoint(medium) { font-size: 1.1em; }
+	font-size: 0.8em;
+	@include breakpoint(medium) { font-size: 1.6em; }
 }
 
 .logoText {
