@@ -1,10 +1,6 @@
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if( (navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) && (!(isChrome))) {
-    body.innerHTML = "This is a Samsung device running 'Internet'";
-} else {
-  console.log("Detection didn't trigger")
+if( navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) {
+    select("header").innerHTML = "";
 }
-
 
 function makeBg(side, gutter, rows) {
   var rSide = side;
