@@ -1,10 +1,9 @@
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if(navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i) && (!(isChrome)) ) {
-    select('p').remove();
-    select('p').remove();
-    select('p').remove();
-    select('p').remove();
-    select('p').remove();
+if(navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) {
+    console.log("Detection triggered")
+    select('footer').remove();
+} else {
+  console.log("Detection didn't trigger")
 }
 
 function makeBg(side, gutter, rows) {
