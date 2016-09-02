@@ -1,5 +1,5 @@
 if( navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) {
-    select("header").innerHTML = "";
+    // Remove or replace broken things
 }
 
 function makeBg(side, gutter, rows) {
