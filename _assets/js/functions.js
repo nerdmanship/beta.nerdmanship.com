@@ -142,21 +142,23 @@ function blurHandle(){
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Called by tlBg
-var showing = false;
+var scrubberShowing = false;
 
 function showScrubber() {
-  if (!(showing)) {
-    showing = true;
-
-    var tl = new TimelineMax();
-
-    tl
-      .to("#scrubbSVG", 1.5, {autoAlpha:1})
-      .to(".circle1", 0.5, {scale: 1, delay: 0.5, ease: Power3.easeOut})
-    ;
-    
-    setTimeout(startPulse, 2000);
+  if (!(scrubberShowing)) {
+    TweenMax.to("#scrubbSVG", 1.5, {autoAlpha:1});
+    scrubberShowing = true;
   }  
+}
+
+var handleNeverShown = true;
+
+function showHandle () {
+  if (handleNeverShown) {
+    TweenMax.to(".circle1", 0.5, {scale: 1, ease: Power3.easeOut})
+    startPulse();
+    handleNeverShown = false;
+  }
 }
 
 // Start pulse
@@ -193,7 +195,10 @@ document.onscroll = function(){
 };
 
 
-
+function mainTlFinished() {
+  showHeadline();
+  showHandle();
+}
 // Show/hide first headline during timeline is playing
 var headlineShowing = false;
 
