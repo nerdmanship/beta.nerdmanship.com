@@ -31,9 +31,14 @@ h2 {
 	letter-spacing: 1px;
 }
 
-h2 {
-	font-size: 0.8em;
-	@include breakpoint(medium) { font-size: 1.5em; }
+h1 { font-size: 1em; }
+h2 { font-size: 1em; }
+p { font-size: 0.8em; }
+
+@include breakpoint(medium) { 
+	h1 { font-size: 2em; }
+	h2 { font-size: 1.2em; }
+	p { font-size: 1em; }
 }
 
 .logoText {
@@ -75,8 +80,8 @@ $interactive: hsla(345, 70%, 50%, 1);
 html { background: $background; }
 body { background: $background; color: $offWhite; }
 footer { background-color: lighten($background, 3); }
-h1 { color: $yellow; }
-h2 { color: desaturate($yellow, 50); }
+h1, h2 { color: $yellow; }
+//h2 { color: desaturate($yellow, 50); }
 p { color: $offWhite; }
 strong { color: $yellow; }
 
@@ -108,14 +113,17 @@ input:focus { outline-color: $interactive; outline-offset: 0px;}
 .button { background-color: $interactive; }
 .micro { color: desaturate(lighten($background, 25), 20); }
 
-// Footer layout
+// Footer
 .socialIcon {
 	fill: $offWhite;
 	.clickTarget { fill: black; opacity: 0.01; }
+	.notification { opacity: 0; }
 	.notification circle { fill: $interactive; }
 }
-
-.copyright p { color: desaturate(lighten($background, 25), 20); }
+.creativeCommons {
+	.ccIcon { fill: desaturate(lighten($background, 25), 20); }
+	a { color: desaturate(lighten($background, 25), 20); }
+}
 
 // Style
 .button,
@@ -145,6 +153,7 @@ body {
 	position: relative;
 	margin-bottom: 0;
 	height: auto;
+	min-width: 320px;
 }
 
 p {
@@ -417,8 +426,9 @@ header {
 #presentation,
 #disclaimer {
 	.container {
+		max-width: 17em;
 		@include breakpoint(medium) {
-    		max-width: 33em;
+    		max-width: 30em;
   		}
 		position: relative;
 		margin: 0 auto;
@@ -465,10 +475,13 @@ footer {
 	
 	.footerContent {
 		position: relative;
-		padding: 2em 0;
+		padding: 4em 0 2em;
 		left: 50%;
 		transform: translateX(-50%);
-		//min-width: 600px;
+		max-width: 100%;
+		.company {
+			margin-bottom: 3em;
+		}
 	}
 
 	.fixedFooter-C { 
@@ -476,18 +489,79 @@ footer {
 		transform: translate(-50%, -50%);
 		padding: 0;
 	}
-
-	.footerContent > div { padding: 1.2em 0; }
 	
 	p { margin-bottom: 0; }
 	.button { margin-bottom: 0; min-width: 15em; }
 
-	.socialLink {
-		width: 50px;
-		margin: 0 1em;
-		overflow: visible;
+	.socialLinks {
+		width: 15em;
+		margin: 0 auto 3em;
+
+		.link {
+			margin-bottom: 0.6em;
+			&:last-child {
+ 			   margin-bottom: 0;
+			}
+			.icon {
+				display: table-cell;
+				vertical-align: middle;
+				.socialLink {
+					width: 2em;
+					overflow: visible;
+				}
+			}
+			.text {
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: 0.5em;
+				padding-bottom: 5px;
+				letter-spacing: 0.5px;
+				color: $offWhite;
+				font-weight: 700;
+				opacity: 0.8;
+				line-height: 1;
+				.subtle {
+					opacity: 0.5;
+					font-weight: 400;
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+	.contactUs {
+		margin-bottom: 2em;
+		.button {
+			border: 1px solid darken(desaturate($yellow, 50), 30);
+			background-color: transparent;
+			color: $yellow;
+		}
 	}
 
+	.creativeCommons{
+		position: relative;
+		margin: 0 auto;
+		width: 270px;
+
+			.icon {
+				display: table-cell;
+				vertical-align: middle;
+				padding-top: 6px;
+				.ccIcon {
+					height: 1em;
+				}
+			}
+			.text {
+				display: table-cell;
+				vertical-align: middle;
+				text-transform: uppercase;
+				font-weight: 700;
+				padding-left: 0.5em;
+				font-size: 0.7em;
+				span {font-size: 1.3em;}
+			}
+
+
+	}
 }
 
 .fixedFooter-F {

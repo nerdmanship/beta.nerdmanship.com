@@ -224,8 +224,8 @@ document.onscroll = function(){
 
 function facebookNotification() {
   setTimeout(function(){
-    TweenMax.to(".notification", 0.3, { scale: 1, ease: Power3.easeOut })
-    TweenMax.to(".notification", 0.3, { y: "-=5", ease: SlowMo.ease.config( 0.1, 0.1, true ) })
+    TweenMax.to(fbNote, 0.3, { scale: 1, ease: Power3.easeOut })
+    TweenMax.to(fbNote, 0.3, { y: "-=5", ease: SlowMo.ease.config( 0.1, 0.1, true ) })
    }, 1000);
 }
 

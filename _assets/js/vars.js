@@ -52,6 +52,7 @@ var
   footerContent = select(".footerContent"),
   footer = select("footer"),
   body = select("body"),
+  fbNote = select(".notification"),
   
   theN = select("#n"),
   theE = select("#e"),

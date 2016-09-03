@@ -1,15 +1,23 @@
 footer
 	.text-center.footerContent
-		.company.headline
-			h1 the Nerdmanship<br />Animation Studio
-			h2 Let's animate the web
-		.socialLinks
-			include ../svgs/socialCodepen.jade
-			include ../svgs/socialFacebook.jade
-			include ../svgs/socialGithub.jade
-		.mailto
-			a.button(href="mailto:johan@nerdmanship.com") Contact
-			p
-				a.micro(href="mailto:johan@nerdmanship.com") johan@nerdmanship.com
-		.copyright
-			p &copy; 2016 the Nerdmanship
+		.socialLinks.text-left
+			.link
+				a(href="https://www.facebook.com/nerdmanship")
+					.icon
+						include ../svgs/socialFacebook.jade
+					.text Get Animation Updates</br><span class="subtle">Facebook &raquo;</span>
+			.link
+				a(href="https://www.codepen.io/nerdmanship")
+					.icon
+						include ../svgs/socialCodepen.jade
+					.text Watch Experiments</br><span class="subtle">Codepen &raquo;</span>
+			.link
+				a(href="mailto:hello@nerdmanship.com")
+					.icon
+						include ../svgs/socialEmail.jade
+					.text Reach out to us</br><span class="subtle">Email &raquo;</span>
+		.creativeCommons
+			a(href="https://github.com/nerdmanship/beta.nerdmanship.com") 
+				.icon 
+					include ../svgs/creativeCommons.jade
+				.text View source code on Github <span>&raquo;</span>

@@ -93,28 +93,19 @@
 	"\/_assets\/jade\/includes\/testController.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/testController.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/_assets\/jade\/includes\/tracking.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/tracking.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_assets\/jade\/includes\/tracking.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/_assets\/jade\/includes\/tracking.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/includes\/tracking.html",
 		"outputPathIsOutsideProject": 0,
@@ -139,6 +130,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/bg.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/bg.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/creativeCommons.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/creativeCommons.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/creativeCommons.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -212,7 +214,7 @@
 	"\/_assets\/jade\/svgs\/socialCodepen.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialCodepen.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialCodepen.html",
@@ -220,10 +222,21 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/_assets\/jade\/svgs\/socialFacebook.jade": {
+	"\/_assets\/jade\/svgs\/socialEmail.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
 		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialEmail.jade",
+		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialEmail.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/_assets\/jade\/svgs\/socialFacebook.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialFacebook.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialFacebook.html",
@@ -245,7 +258,7 @@
 	"\/_assets\/jade\/svgs\/socialGithub.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialGithub.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/socialGithub.html",
@@ -8063,15 +8076,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/public_html\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public_html\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/public_html\/js\/app-min.js": {
 		"fileType": 64,

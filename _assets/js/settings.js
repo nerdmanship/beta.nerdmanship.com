@@ -13,6 +13,8 @@ TweenMax.set(bgRects, { transformOrigin: "center" });
 TweenMax.set(circle1, { transformOrigin: "center", scale: 0, autoAlpha:1 });
 TweenMax.set(circle4, { xPercent: "-50%" });
 
+TweenMax.set(fbNote, { autoAlpha: 1 });
+
 
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
