@@ -107,10 +107,10 @@ tlText
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-tlGlow
+/*tlGlow
   .to("#glowWide", 3, { autoAlpha: 0.25 }, 0)
   .to("#glowSlim", 2, { autoAlpha: 0.05 }, 2)
-  ;
+  ;*/
 
 
 tlHeadline

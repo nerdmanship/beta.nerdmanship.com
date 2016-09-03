@@ -44,20 +44,8 @@
       <div id="contentContainer">
         <div class="kineticType">
           <div class="logoText logoUpper">the</div>
-          <div class="glowContainer">
-            <svg viewbox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" class="glow">
-              <defs>
-                <filter id="blur1" x="-50%" y="-50%" width="300%" height="200%">
-                  <fegaussianblur in="SourceGraphic" stddeviation="10" out="blur"></fegaussianblur>
-                </filter>
-                <filter id="blur2" x="-50%" y="-100%" width="300%" height="300%">
-                  <fegaussianblur in="SourceGraphic" stddeviation="30" out="blur"></fegaussianblur>
-                </filter>
-              </defs>
-              <ellipse id="glowWide" filter="url(#blur2)" cx="400" cy="100" rx="500" ry="50"></ellipse>
-              <ellipse id="glowSlim" filter="url(#blur1)" cx="400" cy="100" rx="500" ry="30"></ellipse>
-            </svg>
-          </div>
+          <!-- .glowContainerinclude ../svgs/glow.jade
+          -->
           <svg id="nerdmanship" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 50">
             <g id="charGroup">
               <g id="n" class="chars">

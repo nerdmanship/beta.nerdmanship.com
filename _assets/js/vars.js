@@ -115,7 +115,7 @@ var
   backDur = 0.1,
   punchDur = 0.1,
   finDur = 0.25,
-  flicDur = 14,
+  flicDur = 13,
   backDelay = "=+0.25",
   punchDelay = "=+0.5",
   arcObj = {type:"soft", values:[{x:"+=0", y:"+=0"}, {x:"+=0", y:"+=100"}, {x:"+=180", y:"+=100"}]},

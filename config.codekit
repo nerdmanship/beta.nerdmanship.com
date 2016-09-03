@@ -159,7 +159,7 @@
 	"\/_assets\/jade\/svgs\/glow.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_assets\/jade\/svgs\/glow.jade",
 		"outputAbbreviatedPath": "\/_assets\/jade\/svgs\/glow.html",

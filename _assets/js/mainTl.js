@@ -28,5 +28,5 @@ tl
   .add(tlFinish, "finish")
   .add(tlText, "finish")
   .add(tlBg, "finish") // 5s
-  .add(tlGlow, 13)
+  //.add(tlGlow, 13)
 ;

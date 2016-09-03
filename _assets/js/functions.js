@@ -141,6 +141,7 @@ function blurHandle(){
 // REVEAL SLIDER
 //––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Called by tlBg
 var showing = false;
 
 function showScrubber() {
@@ -151,7 +152,7 @@ function showScrubber() {
 
     tl
       .to("#scrubbSVG", 1.5, {autoAlpha:1})
-      .to(".circle1", 0.5, {scale: 1, delay: 1.3, ease: Power3.easeOut})
+      .to(".circle1", 0.5, {scale: 1, delay: 0.5, ease: Power3.easeOut})
     ;
     
     setTimeout(startPulse, 2000);
